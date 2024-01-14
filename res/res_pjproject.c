@@ -257,7 +257,7 @@ static void log_forwarder(int level, const char *data, int len)
 		return;
 	}
 
-	/* PJPROJECT uses indention to indicate function call depth. We'll prepend
+	/* PJPROJECT uses indentation to indicate function call depth. We'll prepend
 	 * log statements with a tab so they'll have a better shot at lining
 	 * up */
 	ast_log(ast_level, log_source, log_line, log_func, "\t%s\n", data);

@@ -1044,7 +1044,7 @@ enum {
 	 * Disable device state event caching.  This allows channel
 	 * drivers to selectively prevent device state events from being
 	 * cached by certain channels such as anonymous calls which have
-	 * no persistent represenatation that can be tracked.
+	 * no persistent representation that can be tracked.
 	 */
 	AST_FLAG_DISABLE_DEVSTATE_CACHE = (1 << 21),
 	/*!
@@ -2714,7 +2714,7 @@ int ast_settimeout_full(struct ast_channel *c, unsigned int rate, int (*func)(co
 int ast_transfer(struct ast_channel *chan, char *dest);
 
 /*!
- * \brief Transfer a channel (if supported) receieve protocol result.
+ * \brief Transfer a channel (if supported) receive protocol result.
  * \retval -1 on error
  * \retval 0 if not supported
  * \retval 1 if supported and requested
@@ -2803,7 +2803,7 @@ struct ast_channel *ast_channel_internal_oldest_linkedid(struct ast_channel *a, 
 void ast_channel_internal_copy_linkedid(struct ast_channel *dest, struct ast_channel *source);
 
 /*!
- * \brief Swap uniqueid and linkedid beteween two channels
+ * \brief Swap uniqueid and linkedid between two channels
  * \param a First channel
  * \param b Second channel
  *
@@ -2813,7 +2813,7 @@ void ast_channel_internal_copy_linkedid(struct ast_channel *dest, struct ast_cha
 void ast_channel_internal_swap_uniqueid_and_linkedid(struct ast_channel *a, struct ast_channel *b);
 
 /*!
- * \brief Swap topics beteween two channels
+ * \brief Swap topics between two channels
  * \param a First channel
  * \param b Second channel
  *
@@ -2834,7 +2834,7 @@ void ast_channel_internal_swap_topics(struct ast_channel *a, struct ast_channel 
 void ast_channel_internal_swap_endpoint_forward(struct ast_channel *a, struct ast_channel *b);
 
 /*!
- * \brief Swap snapshots beteween two channels
+ * \brief Swap snapshots between two channels
  * \param a First channel
  * \param b Second channel
  *
@@ -3026,7 +3026,7 @@ struct ast_channel_iterator;
 /*!
  * \brief Destroy a channel iterator
  *
- * \param i the itereator to destroy
+ * \param i the iterator to destroy
  *
  * \details
  * This function is used to destroy a channel iterator that was retrieved by
@@ -4040,7 +4040,7 @@ int ast_channel_get_cc_agent_type(struct ast_channel *chan, char *agent_type, si
  * \param chan channel to remove
  *
  * In a case where it is desired that a channel not be available in any lookups
- * in the global channels conatiner, use this function.
+ * in the global channels container, use this function.
  */
 void ast_channel_unlink(struct ast_channel *chan);
 
@@ -4326,7 +4326,7 @@ void ast_channel_internal_alertpipe_clear(struct ast_channel *chan);
 void ast_channel_internal_alertpipe_close(struct ast_channel *chan);
 int ast_channel_internal_alert_readfd(struct ast_channel *chan);
 int ast_channel_internal_alertpipe_init(struct ast_channel *chan);
-/*! \brief Swap the interal alertpipe between two channels
+/*! \brief Swap the internal alertpipe between two channels
  * \note Handle all of the necessary locking before calling this
  */
 void ast_channel_internal_alertpipe_swap(struct ast_channel *chan1, struct ast_channel *chan2);
@@ -4340,7 +4340,7 @@ int ast_channel_fd_isset(const struct ast_channel *chan, int which);
 
 /*!
  * \since 15
- * \brief Retrieve the number of file decriptor positions present on the channel
+ * \brief Retrieve the number of file descriptor positions present on the channel
  *
  * \param chan The channel to get the count of
  *
@@ -4682,7 +4682,7 @@ struct ast_channel *ast_channel_yank(struct ast_channel *yankee);
  * use ast_bridge_join() or ast_bridge_impart(). If you wish to move a bridged
  * channel into the place of another bridged channel, then use ast_bridge_move().
  *
- * \note When this function returns succesfully, the source channel is in a
+ * \note When this function returns successfully, the source channel is in a
  * state where its continued use is unreliable.
  *
  * \note absolutely _NO_ channel locks should be held before calling this function.

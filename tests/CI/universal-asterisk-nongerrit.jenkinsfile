@@ -218,7 +218,7 @@ pipeline {
 				/*
 				 * When you make changes to the base job or a new branch is discovered
 				 * Jenkins tries to run it the job.  We probably don't want this to happen
-				 * so if "BranchIndexing" was teh cause, don't run any of the steps.
+				 * so if "BranchIndexing" was the cause, don't run any of the steps.
 				 */
 				not {
 					triggeredBy 'BranchIndexingCause'

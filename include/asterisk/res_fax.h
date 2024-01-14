@@ -41,7 +41,7 @@ enum ast_fax_capabilities {
 	AST_FAX_TECH_AUDIO     = (1 << 2),
 	/*! T.38 FAX session supported */
 	AST_FAX_TECH_T38       = (1 << 3),
-	/*! sending mulitple documents supported */
+	/*! sending multiple documents supported */
 	AST_FAX_TECH_MULTI_DOC = (1 << 4),
 	/*! T.38 - T.30 Gateway */
 	AST_FAX_TECH_GATEWAY = (1 << 5),
@@ -169,7 +169,7 @@ struct ast_fax_session_details {
 	} option;
 	/*! override the minimum transmission rate with a channel variable */
 	unsigned int minrate;
-	/*! override the maximum transmission rate with a channel varialbe */
+	/*! override the maximum transmission rate with a channel variable */
 	unsigned int maxrate;
 	/*! our T.38 session parameters, if any */
 	struct ast_fax_t38_parameters our_t38_parameters;
@@ -285,7 +285,7 @@ void ast_fax_tech_unregister(struct ast_fax_tech *tech);
 /*! \brief get the minimum supported fax rate */
 unsigned int ast_fax_minrate(void);
 
-/*! \brief get the maxiumum supported fax rate */
+/*! \brief get the maximum supported fax rate */
 unsigned int ast_fax_maxrate(void);
 
 /*! \brief convert an ast_fax_state to a string */

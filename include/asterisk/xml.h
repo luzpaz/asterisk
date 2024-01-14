@@ -250,7 +250,7 @@ struct ast_xml_node *ast_xml_node_get_children(struct ast_xml_node *node);
 struct ast_xml_node *ast_xml_node_get_next(struct ast_xml_node *node);
 
 /*!
- * \brief Get the previous node in the same leve. */
+ * \brief Get the previous node in the same level. */
 struct ast_xml_node *ast_xml_node_get_prev(struct ast_xml_node *node);
 
 /*!

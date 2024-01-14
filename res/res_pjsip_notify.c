@@ -51,7 +51,7 @@
 				<para>The endpoint to which to send the NOTIFY.</para>
 			</parameter>
 			<parameter name="URI" required="false">
-				<para>Abritrary URI to which to send the NOTIFY.</para>
+				<para>Arbitrary URI to which to send the NOTIFY.</para>
 			</parameter>
 			<parameter name="channel" required="false">
 				<para>Channel name to send the NOTIFY. Must be a PJSIP channel.</para>

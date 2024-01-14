@@ -239,7 +239,7 @@ void ast_optional_api_unuse(const char *symname, ast_optional_fn *optional_ref,
 
 /*
  * Some Asterisk sources are both consumer and provider of optional API's.  The
- * following definitons are intentionally outside the include protected portion
+ * following definitions are intentionally outside the include protected portion
  * of this header so AST_OPTIONAL_API and AST_OPTIONAL_API_ATTR can be redefined
  * each time the header is included.  This also ensures that AST_API_MODULE is
  * undefined after every include of this header.

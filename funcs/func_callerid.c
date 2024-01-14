@@ -467,7 +467,7 @@ enum ID_FIELD_STATUS {
 AST_DEFINE_APP_ARGS_TYPE(ast_party_func_args,
 	AST_APP_ARG(member);	/*!< Member name */
 	AST_APP_ARG(opts);		/*!< Options token */
-	AST_APP_ARG(other);		/*!< Any remining unused arguments */
+	AST_APP_ARG(other);		/*!< Any remaining unused arguments */
 	);
 
 AST_DEFINE_APP_ARGS_TYPE(ast_party_members,

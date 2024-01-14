@@ -106,7 +106,7 @@
 			<depend>HAVE_UNDEFINED_SANITIZER</depend>
 			<support_level>extended</support_level>
 		</member>
-		<member name="BUSYDETECT_TONEONLY" displayname="Enable additional comparision of only the tone duration not the silence part">
+		<member name="BUSYDETECT_TONEONLY" displayname="Enable additional comparison of only the tone duration not the silence part">
 			<conflict>BUSYDETECT_COMPARE_TONE_AND_SILENCE</conflict>
 			<defaultenabled>no</defaultenabled>
 			<support_level>extended</support_level>

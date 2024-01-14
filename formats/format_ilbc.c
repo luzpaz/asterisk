@@ -94,7 +94,7 @@ static int ilbc_seek(struct ast_filestream *fs, off_t sample_offset, int whence)
 	if (whence != SEEK_FORCECUR) {
 		offset = (offset > max)?max:offset;
 	}
-	/* protect against seeking beyond begining. */
+	/* protect against seeking beyond beginning. */
 	offset = (offset < min)?min:offset;
 	if (fseeko(fs->f, offset, SEEK_SET) < 0)
 		return -1;

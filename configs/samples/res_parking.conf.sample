@@ -30,7 +30,7 @@
                                 ; to create extensions that overlap existing
                                 ; parking lot extensions.  The only exception
                                 ; to this is for the parkext extension and
-                                ; only if neither of the overlaping parking
+                                ; only if neither of the overlapping parking
                                 ; lot's parkext is exclusive.
                                 ;
                                 ; The PARKINGDYNPOS variable specifies the

@@ -32,7 +32,7 @@
 
 #include "hrirs.h"
 
-/*! The size of possible positions in the virtual enviroment build with the help
+/*! The size of possible positions in the virtual environment build with the help
  * of binaural audio processing.
  */
 #define POSITION_SIZE 181
@@ -47,7 +47,7 @@
 #define HRIRS_CHANNEL_RIGHT 1
 
 /*! The ast_binaural_positions array contains a specific plan to order conference
- * participants in the virtual enviroment.
+ * participants in the virtual environment.
  */
 static unsigned int ast_binaural_positions[POSITION_SIZE] = {
         90, 80, 100, 70, 110, 60, 120, 50, 130, 40, 140, 20, 160, 0, 180, 85, 95, 75, 105, 65, 115,

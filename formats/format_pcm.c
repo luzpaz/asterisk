@@ -265,7 +265,7 @@ static int pcm_write(struct ast_filestream *fs, struct ast_frame *f)
 #define ltohl(b) htoll(b)
 #define ltohs(b) htols(b)
 #else
-#error "Endianess not defined"
+#error "Endianness not defined"
 #endif
 #endif
 

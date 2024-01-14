@@ -422,7 +422,7 @@ static struct ast_variable *realtime_pgsql(const char *database, const char *tab
 		return NULL;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING,
 				"PostgreSQL RealTime: Realtime retrieval requires at least 1 parameter and 1 value to search on.\n");
@@ -562,7 +562,7 @@ static struct ast_config *realtime_multi_pgsql(const char *database, const char 
 		return NULL;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING,
 				"PostgreSQL RealTime: Realtime retrieval requires at least 1 parameter and 1 value to search on.\n");
@@ -737,7 +737,7 @@ static int update_pgsql(const char *database, const char *tablename, const char 
 		return -1;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING,
 				"PostgreSQL RealTime: Realtime retrieval requires at least 1 parameter and 1 value to search on.\n");
@@ -998,7 +998,7 @@ static int store_pgsql(const char *database, const char *table, const struct ast
 		return -1;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING,
 				"PostgreSQL RealTime: Realtime storage requires at least 1 parameter and 1 value to store.\n");
@@ -1080,7 +1080,7 @@ static int destroy_pgsql(const char *database, const char *table, const char *ke
 		return -1;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (ast_strlen_zero(keyfield) || ast_strlen_zero(lookup))  {
 		ast_log(LOG_WARNING,
 				"PostgreSQL RealTime: Realtime destroy requires at least 1 parameter and 1 value to search on.\n");

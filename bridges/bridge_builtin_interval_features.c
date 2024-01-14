@@ -100,7 +100,7 @@ static void limits_interval_playback(struct ast_bridge_channel *bridge_channel, 
 
 	/*
 	 * It may be necessary to resume music on hold after we finish
-	 * playing the announcment.
+	 * playing the announcement.
 	 */
 	if (ast_test_flag(ast_channel_flags(bridge_channel->chan), AST_FLAG_MOH)) {
 		const char *latest_musicclass;

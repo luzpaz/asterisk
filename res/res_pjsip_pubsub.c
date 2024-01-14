@@ -1710,7 +1710,7 @@ static int sub_persistence_recreate(void *obj)
 	expires = (ast_tvdiff_ms(persistence->expires, ast_tvnow()) / 1000);
 	if (expires <= 0) {
 		/* The subscription expired since we started recreating the subscription. */
-		ast_debug(3, "Expired subscription retrived from persistent store '%s' %s\n",
+		ast_debug(3, "Expired subscription retrieved from persistent store '%s' %s\n",
 			persistence->endpoint, persistence->tag);
 		ast_sorcery_delete(ast_sip_get_sorcery(), persistence);
 		ao2_ref(endpoint, -1);
@@ -1781,7 +1781,7 @@ static int subscription_persistence_recreate(void *obj, void *arg, int flags)
 
 	/* If this subscription has already expired remove it */
 	if (ast_tvdiff_ms(persistence->expires, ast_tvnow()) <= 0) {
-		ast_debug(3, "Expired subscription retrived from persistent store '%s' %s\n",
+		ast_debug(3, "Expired subscription retrieved from persistent store '%s' %s\n",
 			persistence->endpoint, persistence->tag);
 		ast_sorcery_delete(ast_sip_get_sorcery(), persistence);
 		return 0;
@@ -1971,7 +1971,7 @@ struct ast_sip_subscription *ast_sip_create_subscription(const struct ast_sip_su
 
 	contact = ast_sip_location_retrieve_contact_from_aor_list(endpoint->aors);
 	if (!contact || ast_strlen_zero(contact->uri)) {
-		ast_log(LOG_WARNING, "No contacts configured for endpoint %s. Unable to create SIP subsription\n",
+		ast_log(LOG_WARNING, "No contacts configured for endpoint %s. Unable to create SIP subscription\n",
 				ast_sorcery_object_get_id(endpoint));
 		ao2_ref(sub_tree, -1);
 		ao2_cleanup(contact);

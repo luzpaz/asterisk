@@ -61,7 +61,7 @@ struct g726_desc  {
 };
 
 /*
- * Rate dependant format functions (open, rewrite)
+ * Rate dependent format functions (open, rewrite)
  */
 static int g726_open(struct ast_filestream *tmp, int rate)
 {

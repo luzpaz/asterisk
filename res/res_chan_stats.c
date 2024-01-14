@@ -17,7 +17,7 @@
  */
 
 /*!
- * \brief Statsd channel stats. Exmaple of how to subscribe to Stasis events.
+ * \brief Statsd channel stats. Example of how to subscribe to Stasis events.
  *
  * This module subscribes to the channel caching topic and issues statsd stats
  * based on the received messages.

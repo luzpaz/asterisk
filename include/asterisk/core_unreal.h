@@ -214,7 +214,7 @@ struct ast_unreal_pvt *ast_unreal_alloc_stream_topology(size_t size, ao2_destruc
  * \param tech Channel technology to use.
  * \param semi1_state State to start the semi1(owner) channel in.
  * \param semi2_state State to start the semi2(outgoing chan) channel in.
- * \param exten Exten to start the chennels in. (NULL if s)
+ * \param exten Exten to start the channels in. (NULL if s)
  * \param context Context to start the channels in. (NULL if default)
  * \param assignedids
  * \param requestor Channel requesting creation. (NULL if none)

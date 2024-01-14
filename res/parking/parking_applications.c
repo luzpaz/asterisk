@@ -116,7 +116,7 @@
 				created parking lot. The dynamic parking lot cannot be created if it
 				needs to create extensions that overlap existing parking lot extensions.
 				The only exception to this is for the <literal>parkext</literal>
-				extension and only if neither of the overlaping parking lot's
+				extension and only if neither of the overlapping parking lot's
 				<literal>parkext</literal> is exclusive.
 			</para>
 			<para>The <variable>PARKINGDYNPOS</variable> variable specifies the

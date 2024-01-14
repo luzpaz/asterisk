@@ -656,7 +656,7 @@ int dundi_parse_ies(struct dundi_ies *ies, unsigned char *data, int datalen)
 		case DUNDI_IE_EID:
 		case DUNDI_IE_EID_DIRECT:
 			if (len != (int)sizeof(dundi_eid)) {
-				errorf("Improper entity identifer, expecting 6 bytes!\n");
+				errorf("Improper entity identifier, expecting 6 bytes!\n");
 			} else if (ies->eidcount < DUNDI_MAX_STACK) {
 				ies->eids[ies->eidcount] = (dundi_eid *)(data + 2);
 				ies->eid_direct[ies->eidcount] = (ie == DUNDI_IE_EID_DIRECT);
@@ -666,7 +666,7 @@ int dundi_parse_ies(struct dundi_ies *ies, unsigned char *data, int datalen)
 			break;
 		case DUNDI_IE_REQEID:
 			if (len != (int)sizeof(dundi_eid)) {
-				errorf("Improper requested entity identifer, expecting 6 bytes!\n");
+				errorf("Improper requested entity identifier, expecting 6 bytes!\n");
 			} else
 				ies->reqeid = (dundi_eid *)(data + 2);
 			break;

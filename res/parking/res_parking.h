@@ -367,7 +367,7 @@ int parking_lot_cfg_create_extensions(struct parking_lot_cfg *lot_cfg);
  * \since 12.0.0
  * \brief Remove extensions belonging to a parking lot configuration
  *
- * \param lot_cfg parking lot configuratin to remove extensions from
+ * \param lot_cfg parking lot configuration to remove extensions from
  *
  * \note This will not remove extensions registered non-exclusively even
  *       if those extensions were registered by lot_cfg. Those are only

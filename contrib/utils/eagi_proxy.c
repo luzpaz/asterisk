@@ -349,7 +349,7 @@ void write_buf(int desc, char* buf, int size)
 			{
 				size-=end-be;/* reduce new data size by the higher end size */
 				memcpy(be,buf,end-be);/* copy to higher end */
-				be=winbuf;/* shift end to begining of buffer */
+				be=winbuf;/* shift end to beginning of buffer */
 				buf+=end-be;/* shift start of new data */
 			}
 			else/* if new data fits the higher end */

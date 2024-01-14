@@ -329,7 +329,7 @@ int ast_closestream(struct ast_filestream *f);
  * \brief Opens stream for use in seeking, playing
  * \param chan channel to work with
  * \param filename to use
- * \param preflang prefered language to use
+ * \param preflang preferred language to use
  * \return a ast_filestream pointer if it opens the file.
  * \retval NULL on error.
  */
@@ -339,7 +339,7 @@ struct ast_filestream *ast_openstream(struct ast_channel *chan, const char *file
  * \brief Opens stream for use in seeking, playing
  * \param chan channel to work with
  * \param filename to use
- * \param preflang prefered language to use
+ * \param preflang preferred language to use
  * \param asis if set, don't clear generators
  * \retval a ast_filestream pointer if it opens the file.
  * \retval NULL on error.
@@ -349,7 +349,7 @@ struct ast_filestream *ast_openstream_full(struct ast_channel *chan, const char 
  * \brief Opens stream for use in seeking, playing
  * \param chan channel to work with
  * \param filename to use
- * \param preflang prefered language to use
+ * \param preflang preferred language to use
  * \return a ast_filestream pointer if it opens the file.
  * \retval NULL on error.
  */

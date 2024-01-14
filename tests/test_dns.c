@@ -1278,7 +1278,7 @@ AST_TEST_DEFINE(resolver_resolve_async_cancel)
 	}
 
 	if (test_resolver_data.resolution_complete) {
-		ast_test_status_update(test, "Resolution completed without cancelation\n");
+		ast_test_status_update(test, "Resolution completed without cancellation\n");
 		res = AST_TEST_FAIL;
 		goto cleanup;
 	}

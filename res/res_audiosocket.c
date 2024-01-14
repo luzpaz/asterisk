@@ -51,7 +51,7 @@
  * \param addr Address that host was resolved to.
  * \param netsockfd File descriptor of socket.
  *
- * \retval 0 when connection is succesful.
+ * \retval 0 when connection is successful.
  * \retval 1 when there is an error.
  */
 static int handle_audiosocket_connection(const char *server,

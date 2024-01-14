@@ -578,7 +578,7 @@ AST_TEST_DEFINE(recurring_query_cancel_during)
 		goto cleanup;
 	}
 
-	/* Initial query has completed. Now let's make the next query expect a cancelation */
+	/* Initial query has completed. Now let's make the next query expect a cancellation */
 	rdata->cancel_expected = 1;
 
 	/* Wait to be told that the query should be canceled  */

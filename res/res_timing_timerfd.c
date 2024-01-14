@@ -181,7 +181,7 @@ static int timerfd_timer_enable_continuous(void *data)
 	ao2_lock(timer);
 
 	if (timer->is_continuous) {
-		/*It's already in continous mode, no need to do
+		/*It's already in continuous mode, no need to do
 		 * anything further
 		 */
 		ao2_unlock(timer);

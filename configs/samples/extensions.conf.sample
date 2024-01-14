@@ -855,7 +855,7 @@ exten => _X.,40000(ani),NoOp(ANI: ${EXTEN})
 ;    same => n,Wait(1)
 ;    same => n,Hangup()
 ;
-; Send a NOTIFY with the the custom headers defined in pjsip_notify.conf under
+; Send a NOTIFY with the custom headers defined in pjsip_notify.conf under
 ; 'custom-notify-1' inside the SIP dialog for the current channel.
 ;
 ;exten => 6882,1,noOp()

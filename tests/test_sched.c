@@ -437,7 +437,7 @@ AST_TEST_DEFINE(sched_test_freebird)
 	}
 	ast_mutex_unlock(&obj->lock);
 
-	ast_test_status_update(test, "Received signal, calling Scedule and UNREF\n");
+	ast_test_status_update(test, "Received signal, calling Schedule and UNREF\n");
 	ast_test_status_update(test, "ID: %d\n", obj->id);
 	AST_SCHED_DEL_UNREF(con, obj->id, ao2_ref(obj, -1));
 

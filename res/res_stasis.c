@@ -1487,7 +1487,7 @@ int stasis_app_exec(struct ast_channel *chan, const char *app_name, int argc,
 
 				snapshot = ast_channel_snapshot_get_latest(ast_channel_uniqueid(chan));
 				if (!snapshot) {
-					ast_log(LOG_ERROR, "Could not get channel shapshot for '%s'\n",
+					ast_log(LOG_ERROR, "Could not get channel snapshot for '%s'\n",
 						ast_channel_name(chan));
 				} else {
 					struct ast_json *json_args;

@@ -2851,7 +2851,7 @@ int reload_config(int reload)
 		ooH323EpClearAllAliases();
 	}
 
-	/* Inintialize everything to default */
+	/* Ininitialize everything to default */
 	snprintf(gLogFile, sizeof(gLogFile), "%s/%s", ast_config_AST_LOG_DIR, DEFAULT_LOGFILE);
 	gPort = 1720;
 	gIP[0] = '\0';
@@ -3167,7 +3167,7 @@ int reload_config(int reload)
 	ast_config_destroy(cfg);
 
 
-	/* Determine ip address if neccessary */
+	/* Determine ip address if necessary */
 	if (ast_strlen_zero(gIP)) {
 		ooGetLocalIPAddress(gIP);
 		if (!strcmp(gIP, "127.0.0.1") || !strcmp(gIP, "::1")) {

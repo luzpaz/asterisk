@@ -140,7 +140,7 @@ AST_TEST_DEFINE(exists_nominal)
 	case TEST_INIT:
 		info->name = __func__;
 		info->category = CATEGORY;
-		info->summary = "Test nominal existance of resources in the cache";
+		info->summary = "Test nominal existence of resources in the cache";
 		info->description =
 			"This test verifies that if a known resource is in the cache, "
 			"calling ast_media_cache_exists will return logical True. If "
@@ -168,7 +168,7 @@ AST_TEST_DEFINE(exists_off_nominal)
 	case TEST_INIT:
 		info->name = __func__;
 		info->category = CATEGORY;
-		info->summary = "Test off nominal existance of resources in the cache";
+		info->summary = "Test off nominal existence of resources in the cache";
 		info->description =
 			"This test verifies that checking for bad resources (NULL, bad "
 			"scheme, etc.) does not result in false positives.";

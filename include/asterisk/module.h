@@ -21,7 +21,7 @@
 /*! \file
  * \brief Asterisk module definitions.
  *
- * This file contains the definitons for functions Asterisk modules should
+ * This file contains the definitions for functions Asterisk modules should
  * provide and some other module related functions.
  */
 
@@ -107,7 +107,7 @@ enum ast_module_load_result {
  * \brief Possible return types for \ref ast_module_reload
  */
 enum ast_module_reload_result {
-	AST_MODULE_RELOAD_SUCCESS = 0,      /*!< The module was reloaded succesfully */
+	AST_MODULE_RELOAD_SUCCESS = 0,      /*!< The module was reloaded successfully */
 	AST_MODULE_RELOAD_QUEUED,           /*!< The module reload request was queued */
 	AST_MODULE_RELOAD_NOT_FOUND,        /*!< The requested module was not found */
 	AST_MODULE_RELOAD_ERROR,            /*!< An error occurred while reloading the module */

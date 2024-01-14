@@ -80,7 +80,7 @@ enum stir_shaken_failure_action_enum {
 	stir_shaken_failure_action_UNKNOWN = -1,
 	/*! Continue and let dialplan decide action */
 	stir_shaken_failure_action_CONTINUE = 0,
-	/*! Reject request with respone codes defined in RFC8224 */
+	/*! Reject request with response codes defined in RFC8224 */
 	stir_shaken_failure_action_REJECT_REQUEST,
 	/*! Continue but return a Reason header in next provisional response  */
 	stir_shaken_failure_action_CONTINUE_RETURN_REASON,

@@ -459,7 +459,7 @@ static struct unistimsession {
 	ast_mutex_t lock;
 	struct sockaddr_in sin;	 /*!< IP address of the phone */
 	struct sockaddr_in sout;	/*!< IP address of server */
-	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occured */
+	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occurred */
 	unsigned short seq_phone;       /*!< sequence number for the next packet (when we receive a request) */
 	unsigned short seq_server;      /*!< sequence number for the next packet (when we send a request) */
 	unsigned short last_seq_ack;    /*!< sequence number of the last ACK received */
@@ -472,7 +472,7 @@ static struct unistimsession {
 	char macaddr[18];		       /*!< mac address of the phone (not always available) */
 	char firmware[8];		       /*!< firmware of the phone (not always available) */
 	struct wsabuf wsabufsend[MAX_BUF_NUMBER];      /*!< Size of each paquet stored in the buffer array & pointer to this buffer */
-	unsigned char buf[MAX_BUF_NUMBER][MAX_BUF_SIZE];	/*!< Buffer array used to keep the lastest non-acked paquets */
+	unsigned char buf[MAX_BUF_NUMBER][MAX_BUF_SIZE];	/*!< Buffer array used to keep the latest non-acked paquets */
 	struct unistim_device *device;
 	struct unistimsession *next;
 } *sessions = NULL;
@@ -2176,12 +2176,12 @@ static void rcv_mac_addr(struct unistimsession *pte, const unsigned char *buf)
 		struct unistim_line *line;
 		struct unistim_subchannel *sub;
 
-		ast_verb(3, "Device '%s' successfuly registered\n", pte->device->name);
+		ast_verb(3, "Device '%s' successfully registered\n", pte->device->name);
 
 		AST_LIST_LOCK(&pte->device->subs);
 		AST_LIST_TRAVERSE_SAFE_BEGIN(&pte->device->subs, sub, list) {
 			if (sub) {
-				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may apear!\n");
+				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may appear!\n");
 				AST_LIST_REMOVE_CURRENT(list);
 				ast_free(sub);
 			}
@@ -4889,7 +4889,7 @@ static int unistim_call(struct ast_channel *ast, const char *dest, int timeout)
 	}
 	session->state = STATE_RINGING;
 	send_callerid_screen(session, sub);
-	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will apear */
+	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will appear */
 		send_text(TEXT_LINE2, TEXT_NORMAL, session, ustmtext("is calling you.", session));
 		send_text_status(session, ustmtext("Accept        Ignore Hangup", session));
 
@@ -5567,7 +5567,7 @@ static int unistim_sendtext(struct ast_channel *ast, const char *text)
 			case 0:
 				if ((cur < '0') && (cur > '5')) {
 					ast_log(LOG_WARNING,
-							"sendtext failed : position must be a number beetween 0 and 5\n");
+							"sendtext failed : position must be a number between 0 and 5\n");
 					return 1;
 				}
 				pos = cur - '0';
@@ -5583,7 +5583,7 @@ static int unistim_sendtext(struct ast_channel *ast, const char *text)
 			case 2:
 				if ((cur < '3') && (cur > '6')) {
 					ast_log(LOG_WARNING,
-							"sendtext failed : icon must be a number beetween 32 and 63 (first digit invalid)\n");
+							"sendtext failed : icon must be a number between 32 and 63 (first digit invalid)\n");
 					return 1;
 				}
 				icon = (cur - '0') * 10;
@@ -5592,7 +5592,7 @@ static int unistim_sendtext(struct ast_channel *ast, const char *text)
 			case 3:
 				if ((cur < '0') && (cur > '9')) {
 					ast_log(LOG_WARNING,
-							"sendtext failed : icon must be a number beetween 32 and 63 (second digit invalid)\n");
+							"sendtext failed : icon must be a number between 32 and 63 (second digit invalid)\n");
 					return 1;
 				}
 				icon += (cur - '0');
@@ -5601,7 +5601,7 @@ static int unistim_sendtext(struct ast_channel *ast, const char *text)
 			case 4:
 				if (cur != '@') {
 					ast_log(LOG_WARNING,
-							"sendtext failed : icon must be a number beetween 32 and 63 (too many digits)\n");
+							"sendtext failed : icon must be a number between 32 and 63 (too many digits)\n");
 					return 1;
 				}
 				tok = 5;
@@ -6614,7 +6614,7 @@ static struct unistim_device *build_device(const char *cat, const struct ast_var
 		} else if (!strcasecmp(v->name, "contrast")) {
 			d->contrast = atoi(v->value);
 			if ((d->contrast < 0) || (d->contrast > 15)) {
-				ast_log(LOG_WARNING, "contrast must be beetween 0 and 15\n");
+				ast_log(LOG_WARNING, "contrast must be between 0 and 15\n");
 				d->contrast = 8;
 			}
 		} else if (!strcasecmp(v->name, "nat")) {

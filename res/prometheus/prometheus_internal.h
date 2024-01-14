@@ -26,7 +26,7 @@
  *
  * This module provides internal APIs for res_prometheus.
  * It should not be used outsize of that module, and should
- * typically only provide intialization functions for units that
+ * typically only provide initialization functions for units that
  * want to register metrics / handlers with the core API.
  */
 

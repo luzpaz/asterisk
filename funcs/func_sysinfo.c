@@ -57,31 +57,31 @@
 					</enum>
 					<enum name="uptime">
 						<para>System uptime in hours.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="totalram">
 						<para>Total usable main memory size in KiB.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="freeram">
 						<para>Available memory size in KiB.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="bufferram">
 						<para>Memory used by buffers in KiB.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="totalswap">
 						<para>Total swap space still available in KiB.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="freeswap">
 						<para>Free swap space still available in KiB.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 					<enum name="numprocs">
 						<para>Number of current processes.</para>
-						<note><para>This parameter is dependant upon operating system.</para></note>
+						<note><para>This parameter is dependent upon operating system.</para></note>
 					</enum>
 				</enumlist>
 			</parameter>

@@ -13,7 +13,7 @@ GPLv2 (see LICENSE for details), no core functionality in Asterisk has any
 dependencies on libraries that are licensed under the GPL.  One reason a module
 may be in the add-ons category is that it may have a GPL dependency.  Since
 these dependencies are not compatible with dual licensing of Asterisk, the
-dependant modules are set aside to make it clear that they may not be used
+dependent modules are set aside to make it clear that they may not be used
 with commercial versions of Asterisk, unless other licensing arrangements are
 made with the copyright holders of those dependencies.
 

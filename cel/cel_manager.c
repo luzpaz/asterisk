@@ -89,7 +89,7 @@
 							<para>A channel initiated an attended transfer.</para>
 						</enum>
 						<enum name="PICKUP">
-							<para>A channel initated a call pickup.</para>
+							<para>A channel initiated a call pickup.</para>
 						</enum>
 						<enum name="FORWARD">
 							<para>A channel is being forwarded to another destination.</para>

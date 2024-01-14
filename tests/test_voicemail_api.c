@@ -733,7 +733,7 @@ static void test_vm_api_test_teardown(void)
  * \internal
  * \brief Update the test snapshots with a new mailbox snapshot
  *
- * \param mailbox_snapshot The new mailbox shapshot to update the test snapshots with
+ * \param mailbox_snapshot The new mailbox snapshot to update the test snapshots with
  */
 static void test_vm_api_update_test_snapshots(struct ast_vm_mailbox_snapshot *mailbox_snapshot)
 {

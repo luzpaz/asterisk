@@ -90,7 +90,7 @@ static const char name[] = "mp3";
 #define ltohl(b) htoll(b)
 #define ltohs(b) htols(b)
 #else
-#error "Endianess not defined"
+#error "Endianness not defined"
 #endif
 #endif
 

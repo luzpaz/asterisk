@@ -803,7 +803,7 @@ static int file_read(struct ast_channel *chan, const char *cmd, char *data, stru
 		}
 	}
 
-	/* Positve line offset */
+	/* Positive line offset */
 	if (offset > 0) {
 		int64_t count = 0;
 		fseek(ff, 0, SEEK_SET);
@@ -1204,7 +1204,7 @@ static int file_write(struct ast_channel *chan, const char *cmd, char *data, con
 				}
 			}
 
-			/* Positve line offset */
+			/* Positive line offset */
 			if (offset > 0) {
 				int64_t count = 0;
 				fseek(ff, 0, SEEK_SET);

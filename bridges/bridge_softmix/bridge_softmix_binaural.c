@@ -62,7 +62,7 @@ void random_binaural_pos_change(struct softmix_bridge_data *softmix_data)
 {
 	/*
 	 * We perform a shuffle of all channels, even the ones that aren't used at the
-	 * moment of shuffling now. This has the efect that new members will be placed
+	 * moment of shuffling now. This has the effect that new members will be placed
 	 * randomly too.
 	 */
 	unsigned int i;
@@ -179,7 +179,7 @@ float *get_hrir(unsigned int chan_pos, unsigned int chan_side)
 	}
 #else
 	ast_log(LOG_ERROR, "Requesting data for the binaural conference feature without "
-			"it beeing active.\n");
+			"it being active.\n");
 #endif
 
 	return NULL;
@@ -281,7 +281,7 @@ int init_convolve_channel_pair(struct convolve_channel_pair *cchan_pair,
 	return success;
 #else
 	ast_log(LOG_ERROR, "Requesting data for the binaural conference feature "
-			"without it beeing active.\n");
+			"without it being active.\n");
 
 	return -1;
 #endif

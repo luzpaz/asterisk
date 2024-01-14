@@ -650,7 +650,7 @@ static void  __attribute__((destructor)) fini_##rwlock(void) \
  * \brief Support for atomic instructions.
  *
  * These macros implement a uniform interface to use built-in atomic functionality.
- * If available __atomic built-ins are prefered.  Legacy __sync built-ins are used
+ * If available __atomic built-ins are preferred.  Legacy __sync built-ins are used
  * as a fallback for older compilers.
  *
  * Detailed documentation can be found in the GCC manual, all API's are modeled after
@@ -729,7 +729,7 @@ static void  __attribute__((destructor)) fini_##rwlock(void) \
  * perform all memory reads/writes in a single atomic operation.  I don't
  * believe this is possible to exactly replicate using __sync built-ins.
  * Will need to determine potential use cases of this feature and write a
- * wrapper which provides consistant behavior between __sync and __atomic
+ * wrapper which provides consistent behavior between __sync and __atomic
  * implementations.
  */
 #define ast_atomic_compare_exchange_n(ptr, expected, desired, success_memorder, failure_memorder) \

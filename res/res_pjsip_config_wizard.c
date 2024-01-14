@@ -1124,7 +1124,7 @@ static void object_type_loaded_observer(const char *name,
 
 		search = ast_variable_new("@pjsip_wizard", id, "");
 		if (!search) {
-			ast_log(LOG_ERROR, "Unable to allocate memory for vaiable '@pjsip_wizard'.\n");
+			ast_log(LOG_ERROR, "Unable to allocate memory for variable '@pjsip_wizard'.\n");
 			break;
 		}
 		otw->wizard->retrieve_multiple(sorcery, otw->wizard_data, object_type, existing, search);

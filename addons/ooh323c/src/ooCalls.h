@@ -37,7 +37,7 @@ extern "C" {
 /* DISABLEGK is used to selectively disable gatekeeper use. For incoming calls
    DISABLEGK can be set in onReceivedSetup callback by application.
    Very useful in pbx applications where gk is used only when call is
-   to or from outside pbx domian. For outgoing calls, ooMakeCallNoGk
+   to or from outside pbx domain. For outgoing calls, ooMakeCallNoGk
    disables use of gk for specific call.
 */
 

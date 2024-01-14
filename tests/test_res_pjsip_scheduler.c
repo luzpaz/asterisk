@@ -391,7 +391,7 @@ AST_TEST_DEFINE(scheduler_policy)
 		ast_mutex_lock(&test_data1->lock);
 		if (test_data1->done != 0) {
 			ast_mutex_unlock(&test_data1->lock);
-			/* The cancelation failed so we need to prevent cleanup of
+			/* The cancellation failed so we need to prevent cleanup of
 			 * test_data1 to prevent a crash from write-after-free. */
 			test_data1 = NULL;
 			ast_test_status_update(test, "Failed to cancel task");

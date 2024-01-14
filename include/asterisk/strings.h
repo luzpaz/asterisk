@@ -265,7 +265,7 @@ enum ast_strsep_flags {
   \param sep A single character delimiter.
   \param flags Controls post-processing of the result.
   AST_STRSEP_TRIM trims all leading and trailing whitespace from the result.
-  If the result containes only whitespace, it'll be passed through unchanged.
+  If the result contains only whitespace, it'll be passed through unchanged.
   AST_STRSEP_STRIP does a trim then strips the outermost quotes.  You may want
   to trim again after the strip.  Just OR both the TRIM and STRIP flags.
   AST_STRSEP_UNESCAPE unescapes '\' sequences.
@@ -1086,7 +1086,7 @@ AST_INLINE_API(char *ast_str_append_escapecommas(struct ast_str **buf, ssize_t m
  * \param buf This is the address of a pointer to a struct ast_str which should
  *      have been retrieved using ast_str_thread_get.  It will need to
  *      be updated in the case that the buffer has to be reallocated to
- *      accomodate a longer string than what it currently has space for.
+ *      accommodate a longer string than what it currently has space for.
  * \param max_len This is the maximum length to allow the string buffer to grow
  *      to.  If this is set to 0, then there is no maximum length.
  *	If set to -1, we are bound to the current maximum length.

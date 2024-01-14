@@ -771,7 +771,7 @@ int ooSendTermCapMsg(OOH323CallData *call)
       return OO_FAILED;
    }
 
-   /* Define capability descriptior */
+   /* Define capability descriptor */
    capDesc = (H245CapabilityDescriptor*)
              memAlloc(pctxt, sizeof(H245CapabilityDescriptor));
    memset(capDesc, 0, sizeof(H245CapabilityDescriptor));

@@ -39,7 +39,7 @@
 #   #exclude res_config_.*
 #
 #   # include: syntax is the same as exclude. Overrides exclude and
-#   # modules that are marked as disabled by defualt:
+#   # modules that are marked as disabled by default:
 #   #include res_config_sqlite3 app_skel
 #
 #   # If you want to make sure some modules will be conifgured to build,

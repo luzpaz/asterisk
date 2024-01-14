@@ -18,7 +18,7 @@ template = friendly		; By default, include friendly aliases
 
 
 ; Because the Asterisk CLI syntax follows a "module verb argument" syntax,
-; sometimes we run into an issue between being consistant with this format
+; sometimes we run into an issue between being consistent with this format
 ; in the core system, and maintaining system friendliness. In order to get
 ; around this we're providing some useful aliases by default.
 ;

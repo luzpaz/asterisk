@@ -91,7 +91,7 @@ typedef void *(*aco_type_item_find)(struct ao2_container *newcontainer, const ch
  * bad thing to do!
  *
  * \param newitem The newly allocated config object with defaults populated
- * \retval 0 succes, continue processing
+ * \retval 0 success, continue processing
  * \retval non-zero failure, stop processing
  */
 typedef int (*aco_type_item_pre_process)(void *newitem);

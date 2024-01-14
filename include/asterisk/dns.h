@@ -45,7 +45,7 @@ enum ast_dns_search_result {
  * \retval  0 on no records found
  * \retval  1 on success
  *
- * \note Asterisk DNS is synchronus at this time. This means that if your DNS
+ * \note Asterisk DNS is synchronous at this time. This means that if your DNS
  *       service does not work, Asterisk may lock while waiting for a response.
  */
 int ast_search_dns(void *context, const char *dname, int class, int type,
@@ -73,7 +73,7 @@ int ast_search_dns(void *context, const char *dname, int class, int type,
  * \retval AST_DNS_SEARCH_NO_RECORDS on no records found
  * \retval AST_DNS_SEARCH_SUCCESS    on success
  *
- * \note Asterisk DNS is synchronus at this time. This means that if your DNS
+ * \note Asterisk DNS is synchronous at this time. This means that if your DNS
  *       service does not work, Asterisk may lock while waiting for a response.
  */
 enum ast_dns_search_result ast_search_dns_ex(void *context, const char *dname, int rr_class, int rr_type,

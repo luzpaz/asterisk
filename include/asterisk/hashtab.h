@@ -230,8 +230,8 @@ unsigned int ast_hashtab_hash_string_nocase(const void *obj);
  *
  * \param obj the string to hash
  * \return Integer has of the specified string
- * \sa ast_hastable_hash_string
- * \sa ast_hastable_hash_string_nocase
+ * \sa ast_hashtable_hash_string
+ * \sa ast_hashtable_hash_string_nocase
  */
 unsigned int ast_hashtab_hash_string_sax(const void *obj);
 
@@ -351,7 +351,7 @@ struct ast_hashtab *_ast_hashtab_dup(struct ast_hashtab *tab, void *(*obj_dup_fu
 #define ast_hashtab_dup(tab, obj_dup_func) \
 	_ast_hashtab_dup(tab, obj_dup_func, __FILE__, __LINE__, __PRETTY_FUNCTION__)
 
-/*! \brief Gives an iterator to hastable */
+/*! \brief Gives an iterator to hashtable */
 struct ast_hashtab_iter *_ast_hashtab_start_traversal(struct ast_hashtab *tab, const char *file, int lineno, const char *func);
 #define ast_hashtab_start_traversal(tab) \
 	_ast_hashtab_start_traversal(tab, __FILE__, __LINE__, __PRETTY_FUNCTION__)
@@ -373,7 +373,7 @@ void *ast_hashtab_remove_this_object(struct ast_hashtab *tab, void *obj);
 /* for lock-enabled traversals with ability to remove an object during the traversal*/
 /* ------------------ */
 
-/*! \brief Gives an iterator to hastable */
+/*! \brief Gives an iterator to hashtable */
 struct ast_hashtab_iter *_ast_hashtab_start_write_traversal(struct ast_hashtab *tab, const char *file, int lineno, const char *func);
 #define ast_hashtab_start_write_traversal(tab) \
 	_ast_hashtab_start_write_traversal(tab, __FILE__, __LINE__, __PRETTY_FUNCTION__)

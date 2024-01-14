@@ -36,7 +36,7 @@ void tdd_init(void);
 
 /*! Generates a CallerID FSK stream in ulaw format suitable for transmission.
  * \param tdd tdd structure
- * \param buf Buffer to use. This needs to be large enough to accomodate all the generated samples.
+ * \param buf Buffer to use. This needs to be large enough to accommodate all the generated samples.
  * \param string This is the string to send.
  * This function creates a stream of TDD data in ulaw format. It returns the size
  * (in bytes) of the data (if it returns a size of 0, there is probably an error)

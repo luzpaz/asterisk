@@ -64,7 +64,7 @@
 							created parking lot. The dynamic parking lot cannot be created if it
 							needs to create extensions that overlap existing parking lot extensions.
 							The only exception to this is for the <literal>parkext</literal>
-							extension and only if neither of the overlaping parking lot's
+							extension and only if neither of the overlapping parking lot's
 							<literal>parkext</literal> is exclusive.
 						</para>
 						<para>The <variable>PARKINGDYNPOS</variable> variable specifies the
@@ -724,7 +724,7 @@ static struct parking_lot *alloc_new_parking_lot(struct parking_lot_cfg *lot_cfg
 void parking_lot_cfg_remove_extensions(struct parking_lot_cfg *lot_cfg)
 {
 	if (!ast_strlen_zero(lot_cfg->registrar)) {
-		/* Although the function is called ast_context_destroy, the use of this funtion is
+		/* Although the function is called ast_context_destroy, the use of this function is
 		 * intended only to remove extensions, hints, etc registered by the parking lot's registrar.
 		 * It won't actually destroy the context unless that context is empty afterwards and it is
 		 * unreferenced.

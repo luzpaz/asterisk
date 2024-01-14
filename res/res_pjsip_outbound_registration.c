@@ -70,10 +70,7 @@
 					registration will not be attempted again until the configuration is reloaded.</para></description>
 				</configOption>
 				<configOption name="client_uri">
-					<since>
-						<version>12.0.0</version>
-					</since>
-					<synopsis>Client SIP URI used when attemping outbound registration</synopsis>
+					<synopsis>Client SIP URI used when attempting outbound registration</synopsis>
 					<description><para>
 						This is the address-of-record for the outbound registration (i.e. the URI in
 						the To header of the REGISTER).</para>
@@ -769,7 +766,7 @@ static void add_security_headers(struct sip_outbound_registration_client_state *
 		if (client_state->last_status_code == 494) {
 			ast_sip_remove_headers_by_name_and_value(tdata->msg, &security_client, NULL);
 		} else {
-			/* necessary if a retry occures */
+			/* necessary if a retry occurs */
 			add_sec_client_header = (pjsip_msg_find_hdr_by_name(tdata->msg, &security_client, NULL) == NULL) ? 1 : 0;
 		}
 	} else {

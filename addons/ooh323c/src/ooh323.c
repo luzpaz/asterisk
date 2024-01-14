@@ -1715,7 +1715,7 @@ int ooHandleH2250Message(OOH323CallData *call, Q931Message *q931Msg)
          /* DISABLEGK is used to selectively disable gatekeeper use. For
             incoming calls DISABLEGK can be set in onReceivedSetup callback by
             application. Very useful in pbx applications where gk is used only
-            when call is to or from outside pbx domian
+            when call is to or from outside pbx domain
          */
          if(gH323ep.gkClient && !OO_TESTFLAG(call->flags, OO_M_DISABLEGK))
          {

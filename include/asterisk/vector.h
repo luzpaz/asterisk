@@ -68,7 +68,7 @@ enum ast_vector_string_split_flags {
  *
  * \param dest Pointer to an initialized vector.
  * \param input String buffer to split.
- * \param delim String delimeter passed to strsep.
+ * \param delim String delimiter passed to strsep.
  * \param flags Processing options defined by \ref ast_vector_string_split_flags.
  * \param excludes_cmp NULL or a function like strcmp to exclude duplicate strings.
  *

@@ -200,7 +200,7 @@ static enum pjsip_status_code check_content_type_in_dialog(const pjsip_rx_data *
  * \brief Update the display name in the To uri in the tdata with the one from the supplied uri
  *
  * \param tdata the outbound message data structure
- * \param to uri containing the display name to replace in the the To uri
+ * \param to uri containing the display name to replace in the To uri
  *
  * \return 0: success, -1: failure
  */
@@ -229,7 +229,7 @@ static int update_to_display_name(pjsip_tx_data *tdata, char *to)
  * \internal
  * \brief Checks if the given msg var name should be blocked.
  *
- * \details Some headers are not allowed to be overriden by the user.
+ * \details Some headers are not allowed to be overridden by the user.
  *  Determine if the given var header name from the user is blocked for
  *  an outgoing MESSAGE.
  *

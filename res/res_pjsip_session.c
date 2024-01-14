@@ -2082,7 +2082,7 @@ static struct ast_sip_session_media_state *resolve_refresh_media_states(
 						"%s: Attempting to remove stream %d:%s but it doesn't exist anywhere.\n", session_name, i, dp_name);
 				} else {
 					/*
-					 * We're now sure we want to add the the stream.  Since we can re-use
+					 * We're now sure we want to add stream.  Since we can re-use
 					 * slots in the CA topology that have streams marked as "removed", we
 					 * use the slot we saved in removed_np_slot if it exists.
 					 */
@@ -5483,7 +5483,7 @@ static void session_inv_on_media_update(pjsip_inv_session *inv, pj_status_t stat
 
 		/*
 		 * If following_fork is set, then this is probably the result of a
-		 * forked INVITE and SDP asnwers coming from the different fork UAS
+		 * forked INVITE and SDP answers coming from the different fork UAS
 		 * destinations.  In this case updated_sdp_answer will also be set.
 		 *
 		 * If only updated_sdp_answer is set, then this is the non-forking

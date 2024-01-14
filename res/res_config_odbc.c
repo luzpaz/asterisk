@@ -163,7 +163,7 @@ static SQLHSTMT custom_prepare(struct odbc_obj *obj, void *data)
  * \param table
  * \param fields list containing one or more field/operator/value set.
  *
- * Select database and preform query on table, prepare the sql statement
+ * Select database and perform query on table, prepare the sql statement
  * Sub-in the values to the prepared statement and execute it. Return results
  * as a ast_variable list.
  *
@@ -334,7 +334,7 @@ static struct ast_variable *realtime_odbc(const char *database, const char *tabl
  * \param table
  * \param fields list containing one or more field/operator/value set.
  *
- * Select database and preform query on table, prepare the sql statement
+ * Select database and perform query on table, prepare the sql statement
  * Sub-in the values to the prepared statement and execute it.
  * Execute this prepared query against several ODBC connected databases.
  * Return results as an ast_config variable.

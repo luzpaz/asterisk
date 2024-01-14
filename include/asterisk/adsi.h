@@ -97,8 +97,8 @@
 #define ADSI_START_CLEAR_TIMER	0x9B	/* Start / Clear timer */
 #define ADSI_SET_SCRIPT_FLAG	0x9C	/* Set / clear a script flag */
 #define ADSI_JUMP_TO_SUBSCRIPT	0x9D	/* Jump to specified subscript */
-#define ADSI_EVENT_22_TRIGGER	0x9E	/* Trigger an occurance of event 22 */
-#define ADSI_EVENT_23_TRIGGER	0x9f	/* Trigger an occurance of event 23 */
+#define ADSI_EVENT_22_TRIGGER	0x9E	/* Trigger an occurrence of event 22 */
+#define ADSI_EVENT_23_TRIGGER	0x9f	/* Trigger an occurrence of event 23 */
 #define ADSI_EXIT		0xA0	/* Exit the service script interpreter */
 #endif
 

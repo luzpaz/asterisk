@@ -96,7 +96,7 @@ struct ao2_container *stasis_app_stored_recording_find_all(void);
  * \param name Name of the recording.
  * \return New recording object.
  * \retval NULL if recording is not found. \c errno is set to indicate why
- *	- \c ENOMEM - out of memeory
+ *	- \c ENOMEM - out of memory
  *	- \c EACCES - file permissions (or recording is outside the config dir)
  *	- Any of the error codes for stat(), opendir(), readdir()
  */
@@ -279,7 +279,7 @@ struct stasis_app_recording *stasis_app_recording_find_by_name(const char *name)
 /*!
  * \brief Construct a JSON model of a recording.
  *
- * \param recording Recording to conver.
+ * \param recording Recording to convert.
  * \return JSON model.
  * \retval NULL on error.
  */

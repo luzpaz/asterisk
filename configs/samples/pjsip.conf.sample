@@ -1352,7 +1352,7 @@
                         ; The interval (in seconds) to check for expired contacts.
 ;disable_multi_domain=no
             ; Disable Multi Domain support.
-            ; If disabled it can improve realtime performace by reducing
+            ; If disabled it can improve realtime performance by reducing
             ; number of database requsts
             ; (default: "no")
 ;endpoint_identifier_order=ip,username,anonymous
@@ -1424,7 +1424,7 @@
                     ; in the user field of a SIP URI then the field is truncated
                     ; at the first semicolon.  This effectively makes the semicolon
                     ; a non-usable character for PJSIP endpoint names, extensions,
-                    ; and AORs.  This can be useful for improving compatability with
+                    ; and AORs.  This can be useful for improving compatibility with
                     ; an ITSP that likes to use user options for whatever reason.
                     ; Example:
                     ; URI: "sip:1235557890;phone-context=national@x.x.x.x;user=phone"
@@ -1505,7 +1505,7 @@
 ;auth_rejection_permanent=yes   ; Determines whether failed authentication
                                 ; challenges are treated as permanent failures
                                 ; (default: "yes")
-;client_uri=    ; Client SIP URI used when attemping outbound registration
+;client_uri=    ; Client SIP URI used when attempting outbound registration
                 ; (default: "")
 ;contact_user=  ; Contact User to use in request (default: "")
 ;expiration=3600        ; Expiration time for registrations in seconds

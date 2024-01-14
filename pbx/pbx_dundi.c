@@ -269,7 +269,7 @@ struct dundi_transaction {
 	int autokillid;                                /*!< ID to kill connection if answer doesn't come back fast enough */
 	int autokilltimeout;                           /*!< Recommended timeout for autokill */
 	unsigned short strans;                         /*!< Our transaction identifier */
-	unsigned short dtrans;                         /*!< Their transaction identifer */
+	unsigned short dtrans;                         /*!< Their transaction identifier */
 	unsigned char iseqno;                          /*!< Next expected received seqno */
 	unsigned char oiseqno;                         /*!< Last received incoming seqno */
 	unsigned char oseqno;                          /*!< Next transmitted seqno */
@@ -1452,7 +1452,7 @@ static int dundi_encrypt(struct dundi_transaction *trans, struct dundi_packet *p
 	len = pack->datalen + pack->datalen / 100 + 42;
 	compress_space = ast_alloca(len);
 	memset(compress_space, 0, len);
-	/* We care about everthing save the first 6 bytes of header */
+	/* We care about everything save the first 6 bytes of header */
 	bytes = len;
 	res = compress(compress_space, &bytes, pack->data + 6, pack->datalen - 6);
 	if (res != Z_OK) {
@@ -1903,7 +1903,7 @@ static int handle_command_response(struct dundi_transaction *trans, struct dundi
 				hasauth = 1;
 
 			if (!hasauth) {
-				ast_log(LOG_NOTICE, "Reponse to register not authorized!\n");
+				ast_log(LOG_NOTICE, "Response to register not authorized!\n");
 				if (!final) {
 					dundi_ie_append_cause(ied, DUNDI_IE_CAUSE, DUNDI_CAUSE_NOAUTH, "Improper signature in answer");
 					dundi_send(trans, DUNDI_COMMAND_CANCEL, 0, 1, ied);

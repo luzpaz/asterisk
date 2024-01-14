@@ -2166,7 +2166,7 @@ async_agi_abort:
  * \param addr Address that host was resolved to.
  * \param netsockfd File descriptor of socket.
  *
- * \retval 0 when connection is succesful.
+ * \retval 0 when connection is successful.
  * \retval 1 when there is an error.
  */
 static int handle_connection(const char *agiurl, const struct ast_sockaddr addr, const int netsockfd)
@@ -2455,7 +2455,7 @@ static enum agi_result launch_script(struct ast_channel *chan, char *script, int
 		ast_close_fds_above_n(STDERR_FILENO + 1);
 
 		/* Execute script */
-		/* XXX argv should be deprecated in favor of passing agi_argX paramaters */
+		/* XXX argv should be deprecated in favor of passing agi_argX parameters */
 		execv(script, argv);
 		/* Can't use ast_log since FD's are closed */
 		ast_child_verbose(1, "Failed to execute '%s': %s", script, strerror(errno));
@@ -2518,7 +2518,7 @@ static void setup_env(struct ast_channel *chan, char *request, int fd, int enhan
 	ast_agi_send(fd, chan, "agi_threadid: %ld\n", (long)pthread_self());
 
 	/* Send any parameters to the fastagi server that have been passed via the agi application */
-	/* Agi application paramaters take the form of: AGI(/path/to/example/script|${EXTEN}) */
+	/* Agi application parameters take the form of: AGI(/path/to/example/script|${EXTEN}) */
 	for(count = 1; count < argc; count++)
 		ast_agi_send(fd, chan, "agi_arg_%d: %s\n", count, argv[count]);
 

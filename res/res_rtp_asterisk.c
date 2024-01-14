@@ -423,7 +423,7 @@ struct ast_rtp {
 	unsigned int last_transit_time_samples;     /*!< The last transit time in samples */
 	double rxjitter;                      /*!< Last calculated Interarrival jitter in seconds. */
 	double rxjitter_samples;              /*!< Last calculated Interarrival jitter in samples. */
-	double rxmes;                         /*!< Media Experince Score at the moment to be reported */
+	double rxmes;                         /*!< Media Experience Score at the moment to be reported */
 
 	/* DTMF Reception Variables */
 	char resp;                        /*!< The current digit being processed */
@@ -3851,7 +3851,7 @@ static void rtp_add_candidates_to_ice(struct ast_rtp_instance *instance, struct 
 
 		/*
 		 * The instance should not be locked because we can block
-		 * waiting for a STUN respone.
+		 * waiting for a STUN response.
 		 */
 		ao2_unlock(instance);
 		rsp = ast_stun_request(component == AST_RTP_ICE_COMPONENT_RTCP
@@ -9339,7 +9339,7 @@ static void ast_rtp_stun_request(struct ast_rtp_instance *instance, struct ast_s
 
 	/*
 	 * The instance should not be locked because we can block
-	 * waiting for a STUN respone.
+	 * waiting for a STUN response.
 	 */
 	ast_sockaddr_to_sin(suggestion, &suggestion_tmp);
 	ast_stun_request(rtp->s, &suggestion_tmp, username, NULL);

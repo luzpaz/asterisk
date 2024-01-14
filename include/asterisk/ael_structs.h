@@ -117,7 +117,7 @@ struct ael_extension
 	struct ael_extension *next_exten;
 
 	struct ael_priority *loop_break;  /*!< set by latest loop for breaks */
-	struct ael_priority *loop_continue; /*!< set by lastest loop for continuing */
+	struct ael_priority *loop_continue; /*!< set by latest loop for continuing */
 	struct ael_priority *return_target;
 	int return_needed;
 };

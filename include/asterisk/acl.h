@@ -367,7 +367,7 @@ struct ast_ha *ast_duplicate_ha_list(struct ast_ha *original);
  * \details
  * A deep copy of an ast_acl list is made (which in turn means a deep copy of
  * each of the ast_ha structs contained within). The returned value is allocated
- * on the heap and must be freed independently of the input paramater when
+ * on the heap and must be freed independently of the input parameter when
  * finished.
  *
  * \param original The ast_acl_list to copy

@@ -175,7 +175,7 @@ static int lua_pbx_findapp(lua_State *L)
  *
  * \param L the lua_State to use
  *
- * This funciton is executed as the '()' operator for apps accessed through the
+ * This function is executed as the '()' operator for apps accessed through the
  * 'app' table.
  *
  * \return LUA error
@@ -573,7 +573,7 @@ static int lua_get_variable(lua_State *L)
 	lua_pushvalue(L, 2);
 	lua_push_variable_table(L);
 
-	/* if this is not a request for a dialplan funciton attempt to retrieve
+	/* if this is not a request for a dialplan function attempt to retrieve
 	 * the value of the variable */
 	if (!ast_strlen_zero(name) && name[strlen(name) - 1] != ')') {
 		pbx_retrieve_variable(chan, name, &value, workspace, LUA_BUF_SIZE, ast_channel_varshead(chan));

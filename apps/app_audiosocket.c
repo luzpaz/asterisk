@@ -65,7 +65,7 @@
 		<description>
 			<para>Connects to the given TCP service, then transmits channel audio over that socket.  In turn, audio is received from the socket and sent to the channel.  Only audio frames will be transmitted.</para>
 			<para>Protocol is specified at https://docs.asterisk.org/Configuration/Channel-Drivers/AudioSocket/</para>
-			<para>This application does not automatically answer and should generally be preceeded by an application such as Answer() or Progress().</para>
+			<para>This application does not automatically answer and should generally be preceded by an application such as Answer() or Progress().</para>
 		</description>
 	</application>
  ***/
@@ -176,7 +176,7 @@ static int audiosocket_run(struct ast_channel *chan, const char *id, int svc)
 	}
 
 	if (ast_audiosocket_init(svc, id)) {
-		ast_log(LOG_ERROR, "Failed to intialize AudioSocket\n");
+		ast_log(LOG_ERROR, "Failed to initialize AudioSocket\n");
 		return -1;
 	}
 

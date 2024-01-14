@@ -41,7 +41,7 @@
  *
  * This is some code that was part of the original chan_sip implementation
  * that is not part of the RFC 3863 definition, but we are keeping available
- * for backward compatability. The original comment stated that Eyebeam
+ * for backward compatibility. The original comment stated that Eyebeam
  * supports this format.
  */
 static void add_eyebeam(pj_pool_t *pool, pj_xml_node *node, const char *pidfstate)

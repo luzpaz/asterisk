@@ -83,7 +83,7 @@ FILES
 
 	# $prog converts POSIX timestamps to readable format
 	# using this Python strftime format string.  If not specified
-	# or an empty string, no format covnersion is done.
+	# or an empty string, no format conversion is done.
 	LOG_DATEFORMAT="%m/%d %H:%M:%S.%f"
 
 	# The timezone to use when converting POSIX timestamps to
@@ -175,7 +175,7 @@ fi
 # Timestamp to use for output files
 df=${tarball_uniqueid:-$(${DATEFORMAT})}
 
-# Extract the Python timestamp conver script from the end of this
+# Extract the Python timestamp convert script from the end of this
 # script and save it to /tmp/.ast_tsconvert.py
 
 ss=`egrep -n "^#@@@SCRIPTSTART@@@" $0 |cut -f1 -d:`
@@ -231,7 +231,7 @@ parser.add_argument('--timezone', action='store', required=False)
 args=parser.parse_args()
 
 # We only convert timestamps that are at the beginning of a line
-# or are preceeded by a whitespace character or a '['
+# or are preceded by a whitespace character or a '['
 rets = re.compile(r'(^|(?<=\s|\[))\d+(\.\d+)?', flags=re.M)
 if args.timezone and len(args.timezone) > 0:
    tzf = tz.tzfile('/usr/share/zoneinfo/' + args.timezone)

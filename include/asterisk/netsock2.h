@@ -92,7 +92,7 @@ enum ast_transport {
  * It is important to always initialize ast_sockaddr before use
  * -- even if they are passed to ast_sockaddr_copy() as the
  * underlying storage could be bigger than what ends up being
- * copied -- leaving part of the data unitialized.
+ * copied -- leaving part of the data uninitialized.
  */
 struct ast_sockaddr {
 	struct sockaddr_storage	 ss;
@@ -490,7 +490,7 @@ int ast_sockaddr_resolve_first_af(struct ast_sockaddr *addr,
  * Apply a netmask to an address and store the result in a separate structure.
  *
  * When dealing with IPv6 addresses, one cannot apply a netmask with a simple
- * logical AND operation.  Futhermore, the incoming address may be an IPv4
+ * logical AND operation.  Furthermore, the incoming address may be an IPv4
  * address and needs to be mapped properly before attempting to apply a rule.
  *
  * \param addr The IP address to apply the mask to.
@@ -645,7 +645,7 @@ int ast_sockaddr_hash(const struct ast_sockaddr *addr);
  * \brief
  * Returns a string representation of an ast_transport
  *
- * \return Name of the tranpsort if it is defined
+ * \return Name of the transport if it is defined
  * \return Undefined if the transport is undefined
  */
 const char *ast_transport2str(enum ast_transport transport);

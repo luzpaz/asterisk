@@ -57,7 +57,7 @@
 
 \code
    AST_TEST_DEFINE(sample_test_cb) \\The name of the callback function
-   {                               \\The the function's body
+   {                               \\The function's body
       switch (cmd) {
       case TEST_INIT:
           info->name = "sample_test";
@@ -74,7 +74,7 @@
       .
       .
       if (fail) {                 \\ the following is just some example logic
-          ast_test_status_update(test, "an error occured because...");
+          ast_test_status_update(test, "an error occurred because...");
           res = AST_RESULT_FAIL;
       } else {
           res = AST_RESULT_PASS

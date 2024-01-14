@@ -342,7 +342,7 @@ static int grabber_open(struct video_out_desc *v)
 			continue;
 		/* for each type of grabber supported... */
 		for (j = 0; (g = console_grabbers[j]); j++) {
-			/* the grabber is opened and the informations saved in the device table */
+			/* the grabber is opened and the information saved in the device table */
 			g_data = g->open(v->devices[i].name, &v->loc_src_geometry, v->fps);
 			if (!g_data)
 				continue;
@@ -370,7 +370,7 @@ static int grabber_open(struct video_out_desc *v)
  * \param fps = frame per seconds, for every device
  *
  * returns:
- * - NULL on falure
+ * - NULL on failure
  * - reference to the device buffer on success
  */
 static struct fbuf_t *grabber_read(struct video_device *dev, int fps)
@@ -785,7 +785,7 @@ int console_write_video(struct ast_channel *chan, struct ast_frame *f)
  * is returned as an argument.
  *
  * \param env = video environment descriptor
- * \param tail = tail ponter (practically a return value)
+ * \param tail = tail pointer (practically a return value)
  */
 static struct ast_frame *get_video_frames(struct video_desc *env, struct ast_frame **tail)
 {

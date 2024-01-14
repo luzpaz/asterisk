@@ -260,7 +260,7 @@ def load_allowable_values(json, context):
         if not 'values' in json:
             raise SwaggerError("Missing field values", context)
         return AllowableList(json['values'])
-    raise SwaggerError("Unkown valueType %s" % value_type, context)
+    raise SwaggerError("Unknown valueType %s" % value_type, context)
 
 
 class Parameter(Stringify):

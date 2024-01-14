@@ -97,7 +97,7 @@ That's it!
 #define PLC_PITCH_OVERLAP_MAX   (PLC_PITCH_MIN >> 2)
 /*! The length over which the AMDF function looks for similarity (20 ms) */
 #define CORRELATION_SPAN        160
-/*! History buffer length. The buffer much also be at leat 1.25 times
+/*! History buffer length. The buffer much also be at least 1.25 times
     PLC_PITCH_MIN, but that is much smaller than the buffer needs to be for
     the pitch assessment. */
 #define PLC_HISTORY_LEN         (CORRELATION_SPAN + PLC_PITCH_MIN)

@@ -1,6 +1,6 @@
 ; Config to test config parsing
 ; global and item have values that differ from defaults
-; global_defaults and item_defualts are to show all defaults are set
+; global_defaults and item_defaults are to show all defaults are set
 ; there should be an option for every default type, and a custom type
 
 [global]

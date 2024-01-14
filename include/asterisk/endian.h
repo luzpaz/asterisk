@@ -17,14 +17,14 @@
  */
 
 /*! \file
- * \brief Asterisk architecture endianess compatibility definitions
+ * \brief Asterisk architecture endianness compatibility definitions
  */
 
 #ifndef _ASTERISK_ENDIAN_H
 #define _ASTERISK_ENDIAN_H
 
 /*
- * Autodetect system endianess
+ * Autodetect system endianness
  */
 
 
@@ -66,7 +66,7 @@
 #endif /* __BYTE_ORDER */
 
 #ifndef __BYTE_ORDER
-#error Need to know endianess
+#error Need to know endianness
 #endif /* __BYTE_ORDER */
 
 #endif /* _ASTERISK_ENDIAN_H */

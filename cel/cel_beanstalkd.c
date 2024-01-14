@@ -22,7 +22,7 @@
  *
  * \brief Asterisk Channel Event Beanstalkd backend
  *
- * This module requires the beanstalk-client library, avaialble from
+ * This module requires the beanstalk-client library, available from
  * https://github.com/deepfryed/beanstalk-client
  * \ingroup cel_drivers
  */

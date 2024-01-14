@@ -188,7 +188,7 @@ int ast_shutdown_final(void);
  * The counter accumulates positive or negative values supplied by
  * \see ast_add_profile(), dividing them by the 'scale' value passed in the
  * create call, and also counts the number of 'events'.
- * Values can also be taked by the TSC counter on ia32 architectures,
+ * Values can also be taken by the TSC counter on ia32 architectures,
  * in which case you can mark the start of an event calling ast_mark(id, 1)
  * and then the end of the event with ast_mark(id, 0).
  * For non-i386 architectures, these two calls return 0.

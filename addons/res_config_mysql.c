@@ -334,7 +334,7 @@ static struct ast_variable *realtime_mysql(const char *database, const char *tab
 		return NULL;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING, "MySQL RealTime: Realtime retrieval requires at least 1 parameter and 1 value to search on.\n");
 		release_database(dbh);
@@ -454,7 +454,7 @@ static struct ast_config *realtime_multi_mysql(const char *database, const char 
 		return NULL;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING, "MySQL RealTime: Realtime retrieval requires at least 1 parameter and 1 value to search on.\n");
 		ast_config_destroy(cfg);
@@ -584,7 +584,7 @@ static int update_mysql(const char *database, const char *tablename, const char 
 		return -1;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING, "MySQL RealTime: Realtime update requires at least 1 parameter and 1 value to update.\n");
 		release_table(table);
@@ -767,7 +767,7 @@ static int store_mysql(const char *database, const char *table, const struct ast
 		release_database(dbh);
 		return -1;
 	}
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	if (!field) {
 		ast_log(LOG_WARNING, "MySQL RealTime: Realtime storage requires at least 1 parameter and 1 value to search on.\n");
 		release_database(dbh);
@@ -826,7 +826,7 @@ static int destroy_mysql(const char *database, const char *table, const char *ke
 		return -1;
 	}
 
-	/* Get the first parameter and first value in our list of passed paramater/value pairs */
+	/* Get the first parameter and first value in our list of passed parameter/value pairs */
 	/* newparam = va_arg(ap, const char *);
 	newval = va_arg(ap, const char *);*/
 	if (ast_strlen_zero(keyfield) || ast_strlen_zero(lookup))  {

@@ -240,7 +240,7 @@ void reset_channel_pair(struct convolve_channel_pair *channel_pair,
 /*!
  * \brief Randomly changes the virtual positions of conference participants.
  *
- * \param softmix_data The structure containing all position informations.
+ * \param softmix_data The structure containing all position information.
  */
 void random_binaural_pos_change(struct softmix_bridge_data *softmix_data);
 
@@ -262,7 +262,7 @@ int do_convolve(struct convolve_channel *chan, int16_t *in_samples,
  * \brief Binaural convolving of audio data for a channel pair (left and right channel).
  *
  * \param data  Contains the left and right audio channel.
- * \param pos_id The position the channel has in the virtual enviroment.
+ * \param pos_id The position the channel has in the virtual environment.
  * \param in_samples The audio data which will be convolved for both channels.
  * \param in_sample_size The size of the audio data.
  * \param channel_name The name of the channel
@@ -276,9 +276,9 @@ struct convolve_channel_pair *do_convolve_pair(struct convolve_data *data,
 
 /*!
  * \brief Provides a head related impulse response for the given position in the virtual
- * enviroment.
+ * environment.
  *
- * \param chan_pos The position of the channel in the virtual enviroment.
+ * \param chan_pos The position of the channel in the virtual environment.
  * \param chan_side 0 for the left audio channel, 1 for the right.
  *
  * \retval The hrir for the given position in the virtual room for either the left or right
@@ -293,7 +293,7 @@ float *get_hrir(unsigned int chan_pos, unsigned int chan_side);
  *
  * \param channel The channel used for binaural audio processing.
  * \param hrtf_len The length of the head related impulse response used for binaural processing.
- * \param chan_pos The position of the channel in the virtual enviroment.
+ * \param chan_pos The position of the channel in the virtual environment.
  * \param chan_side 0 for the left audio channel, 1 for the right.
  * \param default_sample_size The default size of audio samples.
  *
@@ -309,7 +309,7 @@ int init_convolve_channel(struct convolve_channel *channel, unsigned int hrtf_le
  *
  * \param cchan_pair The channel pair used for binaural audio processing.
  * \param hrtf_len The length of the head related impulse response used for binaural processing.
- * \param chan_pos The position of the channel in the virtual enviroment.
+ * \param chan_pos The position of the channel in the virtual environment.
  * \param default_sample_size The default size of audio samples.
  *
  * \retval 0 on success
@@ -354,13 +354,13 @@ void free_convolve_channel_pair(struct convolve_channel_pair *cchan_pair);
 void free_convolve_data(struct convolve_data *data);
 
 /*!
- * \brief Joins a channel into a virtual enviroment build with the help of binaural synthesis.
+ * \brief Joins a channel into a virtual environment build with the help of binaural synthesis.
  *
  * \param data Contains all channels and data needed for binaural processing
  *  (e.g. head related transfer functions).
  * \param default_sample_size The default size of audio samples.
  *
- * \retval The position of the channel in the virtual enviroment.
+ * \retval The position of the channel in the virtual environment.
  * \retval -1 on failure
  */
 int set_binaural_data_join(struct convolve_data *data, unsigned int default_sample_size);
@@ -372,7 +372,7 @@ int set_binaural_data_join(struct convolve_data *data, unsigned int default_samp
  *
  * \param data Contains all channels and data needed for binaural processing
  *  (e.g. head related transfer functions).
- * \param pos The position of the channel in the virtual enviroment.
+ * \param pos The position of the channel in the virtual environment.
  * \param default_sample_size The default size of audio samples.
  */
 void set_binaural_data_leave(struct convolve_data *data, unsigned int pos,
@@ -388,7 +388,7 @@ void softmix_process_write_binaural_audio(struct softmix_channel *sc,
 		unsigned int default_sample_size);
 
 /*!
- * \brief Checks if a position change in the virtual enviroment is requested by one of
+ * \brief Checks if a position change in the virtual environment is requested by one of
  * the participants.
  *
  * \param bridge The conference bridge.
@@ -429,7 +429,7 @@ void binaural_mixing(struct ast_bridge *bridge, struct softmix_bridge_data *soft
  * \param bridge_channel Contains the information if binaural processing is active or not.
  *  If active binaural audio data will be copied, if not mono data will be provided in an
  *  interleaved format.
- * \param sc The softmix channel holding all informations for the process.
+ * \param sc The softmix channel holding all information for the process.
  * \param bin_buf The buffer that contains all mixing results.
  * \param ann_buf The buffer that contains mixed announcements in an interleaved format.
  * \param softmix_datalen The size of the audio data.

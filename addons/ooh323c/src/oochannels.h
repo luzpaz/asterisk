@@ -85,7 +85,7 @@ EXTERN int ooAcceptH225Connection(void);
  * @param call        Pointer to a call for which H.245 connection request has
  *                    arrived.
  *
- * @return            OO_OK, on succes. OO_FAILED, on failure.
+ * @return            OO_OK, on success. OO_FAILED, on failure.
  */
 EXTERN int ooAcceptH245Connection(struct OOH323CallData *call);
 
@@ -93,7 +93,7 @@ EXTERN int ooAcceptH245Connection(struct OOH323CallData *call);
  * This function is used to create an H.225 connection to the remote end point.
  * @param call       Pointer to the call for which H.225 connection has to be
  *                   setup.
- * @return           OO_OK, on succes. OO_FAILED, on failure.
+ * @return           OO_OK, on success. OO_FAILED, on failure.
  */
 EXTERN int ooCreateH225Connection(struct OOH323CallData *call);
 

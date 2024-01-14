@@ -47,7 +47,7 @@
 			</parameter>
 		</syntax>
 		<description>
-			<para>Generate a SHA1 digest via the SHA1 algorythm.</para>
+			<para>Generate a SHA1 digest via the SHA1 algorithm.</para>
 			<example title="Set sha1hash variable to SHA1 hash of junky">
 			exten => s,1,Set(sha1hash=${SHA1(junky)})
 			</example>

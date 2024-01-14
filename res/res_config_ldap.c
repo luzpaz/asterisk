@@ -164,7 +164,7 @@ static struct ast_variable *variable_named(struct ast_variable *var, const char 
  * \brief Count semicolons in string
  * \param somestr - pointer to a string
  *
- * \return number of occurances of the delimiter(semicolon)
+ * \return number of occurrences of the delimiter(semicolon)
  */
 static int semicolon_count_str(const char *somestr)
 {
@@ -802,11 +802,11 @@ static struct ast_str *create_lookup_filter(struct ldap_table_config *config, co
 }
 
 /*! \brief LDAP base function
- * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occured
+ * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occurred
  * caller should free the returned array and ast_variables
  * \param entries_count_ptr is a pointer to found entries count (can be NULL)
  * \param basedn is the base DN
- * \param table_name is the table_name (used dor attribute convertion and additional filter)
+ * \param table_name is the table_name (used dor attribute conversion and additional filter)
  * \param fields contains list of pairs name/value
 */
 static struct ast_variable **realtime_ldap_base_ap(unsigned int *entries_count_ptr,
@@ -910,7 +910,7 @@ static struct ast_variable **realtime_ldap_base_ap(unsigned int *entries_count_p
 							struct ast_variable *test_var = *p;
 							int base_var_found = 0;
 
-							/* run throught the default values and fill it inn if it is missing */
+							/* run through the default values and fill it inn if it is missing */
 							while (test_var) {
 								if (strcasecmp(test_var->name, base_var->name) == 0) {
 									base_var_found = 1;
@@ -1033,7 +1033,7 @@ static struct ast_variable *realtime_ldap(const char *basedn,
 /*! \brief See Asterisk doc
  *
  * this function will be called for the switch statement if no match is found with the realtime_ldap function(i.e. it is a failover);
- * however, the ast_load_realtime wil match on wildcharacters also depending on what the mode is set to
+ * however, the ast_load_realtime will match on wildcharacters also depending on what the mode is set to
  * this is an area of asterisk that could do with a lot of modification
  * I think this function returns Realtime dynamic objects
  */
@@ -1088,7 +1088,7 @@ static struct ast_config *realtime_multi_ldap(const char *basedn,
 
 }
 
-/*! \brief Sorting alogrithm for qsort to find the order of the variables \a a and \a b
+/*! \brief Sorting algorithm for qsort to find the order of the variables \a a and \a b
  * \param a pointer to category_and_metric struct
  * \param b pointer to category_and_metric struct
  *
@@ -1741,7 +1741,7 @@ static int load_module(void)
  */
 static int unload_module(void)
 {
-	/* Aquire control before doing anything to the module itself. */
+	/* Acquire control before doing anything to the module itself. */
 	ast_mutex_lock(&ldap_lock);
 
 	table_configs_free();
@@ -1764,7 +1764,7 @@ static int unload_module(void)
  */
 static int reload(void)
 {
-	/* Aquire control before doing anything to the module itself. */
+	/* Acquire control before doing anything to the module itself. */
 	ast_mutex_lock(&ldap_lock);
 
 	if (ldapConn) {

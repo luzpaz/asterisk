@@ -151,7 +151,7 @@ int ast_say_digits_full(struct ast_channel *chan, int num,
  * \param lang language to speak in
  * \details
  * Vocally says the digits of a given string
- * \retval 0 on succes
+ * \retval 0 on success
  * \retval DTMF if interrupted
  * \retval -1 on failure
  */

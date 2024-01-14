@@ -54,7 +54,7 @@
 			</parameter>
 			<parameter name="item" required="true">
 				<para>The name of the key whose value to return.</para>
-				<para>Multiple keys can be listed separated by a hierarchy delimeter, which will recursively index into a nested JSON string to retrieve a specific subkey's value.</para>
+				<para>Multiple keys can be listed separated by a hierarchy delimiter, which will recursively index into a nested JSON string to retrieve a specific subkey's value.</para>
 			</parameter>
 			<parameter name="separator" required="false">
 				<para>A single character that delimits a key hierarchy for nested indexing. Default is a period (.)</para>
@@ -186,7 +186,7 @@ static int parse_node(char **key, char *currentkey, char *nestchar, int count, s
 			}
 			break;
 		default:
-			ast_log(LOG_WARNING, "Got unsuported type %d\n", ast_json_typeof(jsonval));
+			ast_log(LOG_WARNING, "Got unsupported type %d\n", ast_json_typeof(jsonval));
 			return -1;
 	}
 	return 0;
@@ -197,7 +197,7 @@ static int json_decode_read(struct ast_channel *chan, const char *cmd, char *dat
 	int count = 0;
 	struct ast_flags flags = {0};
 	struct ast_json *json = NULL, *start = NULL;
-	char *nestchar = "."; /* default delimeter for nesting key indexing is . */
+	char *nestchar = "."; /* default delimiter for nesting key indexing is . */
 	int index, res, depth = 0;
 
 	AST_DECLARE_APP_ARGS(args,
@@ -246,7 +246,7 @@ static int json_decode_read(struct ast_channel *chan, const char *cmd, char *dat
 	sprintf(varsubst, "${%s}", args.varname); /* safe, because of the above allocation */
 	ast_str_substitute_variables(&str, 0, chan, varsubst);
 
-	ast_debug(1, "Parsing JSON using nesting delimeter '%s'\n", nestchar);
+	ast_debug(1, "Parsing JSON using nesting delimiter '%s'\n", nestchar);
 
 	if (ast_str_strlen(str) == 0) {
 		ast_debug(1, "Variable '%s' contains no data, nothing to search!\n", args.varname);

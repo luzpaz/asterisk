@@ -2422,7 +2422,7 @@ static char *hfp_parse_cusd(struct hfp_pvt *hfp, char *buf)
 	size_t s;
 
 	/* parse cusd message in the following format:
-	 * +CUSD: 0,"100,00 EURO, valid till 01.01.2010, you are using tariff "Mega Tariff". More informations *111#."
+	 * +CUSD: 0,"100,00 EURO, valid till 01.01.2010, you are using tariff "Mega Tariff". More information *111#."
 	 */
 	message_start = 0;
 	message_end = 0;
@@ -2825,7 +2825,7 @@ static int hfp_parse_cind_test(struct hfp_pvt *hfp, char *buf)
 
 	hfp->nocallsetup = 1;
 
-	/* parse the indications list.  It is in the follwing format:
+	/* parse the indications list.  It is in the following format:
 	 * +CIND: ("ind1",(0-1)),("ind2",(0-5))
 	 */
 	group = 0;

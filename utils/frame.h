@@ -269,7 +269,7 @@ extern int workloop( FILE *theinfile, FILE *theoutfile,
 
 /* --------------------------------------------------------------------
    Five functions for printing to stderr. Depending on the level of verbose,
-   output may be supressed. fatalerror() is like error() but does not return.
+   output may be suppressed. fatalerror() is like error() but does not return.
    fatalperror() is like the standard function perror() but does not return.
    -------------------------------------------------------------------- */
 extern int chat( const char *format, ...);

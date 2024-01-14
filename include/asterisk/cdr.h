@@ -450,7 +450,7 @@ int ast_cdr_reset(const char *channel_name, int keep_variables);
  * \brief Serializes all the data and variables for a current CDR record
  * \param channel_name The channel to get the CDR for
  * \param buf A buffer to use for formatting the data
- * \param delim A delimeter to use to separate variable keys/values
+ * \param delim A delimiter to use to separate variable keys/values
  * \param sep A separator to use between nestings
  * \return the total number of serialized variables
  */

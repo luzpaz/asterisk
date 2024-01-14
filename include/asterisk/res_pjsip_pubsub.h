@@ -468,7 +468,7 @@ pjsip_sip_uri *ast_sip_subscription_get_sip_uri(struct ast_sip_subscription *sub
 void ast_sip_subscription_get_local_uri(struct ast_sip_subscription *sub, char *buf, size_t size);
 
 /*!
- * \brief Retrive the remote URI for this subscription
+ * \brief Retrieve the remote URI for this subscription
  *
  * This is the remote URI as determined by the underlying SIP dialog.
  *

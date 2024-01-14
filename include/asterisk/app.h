@@ -863,7 +863,7 @@ int ast_vm_test_create_user(const char *context, const char *mailbox);
  * background by forking twice.  The option provides similar
  * functionality to the '&' in the OS shell command "cmd &".  The
  * option allows Asterisk to run a reaper loop to watch the first fork
- * which immediately exits after spaning the second fork.  The actual
+ * which immediately exits after spanning the second fork.  The actual
  * program is run in the second fork.
  * \param file execvp(file, argv) file parameter
  * \param argv execvp(file, argv) argv parameter

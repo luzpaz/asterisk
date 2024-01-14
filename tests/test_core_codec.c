@@ -214,7 +214,7 @@ AST_TEST_DEFINE(codec_get)
 	}
 
 	if (ast_codec_register(&audio_get)) {
-		ast_test_status_update(test, "Unsucessfully registered a codec for getting\n");
+		ast_test_status_update(test, "Unsuccessfully registered a codec for getting\n");
 		return AST_TEST_FAIL;
 	}
 
@@ -279,7 +279,7 @@ AST_TEST_DEFINE(codec_get_unknown)
 	}
 
 	if (ast_codec_register(&audio_get_unknown)) {
-		ast_test_status_update(test, "Unsucessfully registered a codec for getting\n");
+		ast_test_status_update(test, "Unsuccessfully registered a codec for getting\n");
 		return AST_TEST_FAIL;
 	}
 
@@ -319,7 +319,7 @@ AST_TEST_DEFINE(codec_get_id)
 	}
 
 	if (ast_codec_register(&audio_get_id)) {
-		ast_test_status_update(test, "Unsucessfully registered a codec for getting\n");
+		ast_test_status_update(test, "Unsuccessfully registered a codec for getting\n");
 		return AST_TEST_FAIL;
 	}
 

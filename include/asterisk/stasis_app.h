@@ -38,7 +38,7 @@
  * Stasis app receives a \c 'stasis-start' and \c 'stasis-end' events.
  *
  * Stasis apps register themselves using the \ref stasis_app_register and
- * stasis_app_unregister functions. Messages are sent to an appliction using
+ * stasis_app_unregister functions. Messages are sent to an application using
  * \ref stasis_app_send.
  *
  * Finally, Stasis apps control channels through the use of the \ref

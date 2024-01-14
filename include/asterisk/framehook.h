@@ -76,7 +76,7 @@
 	on channel destruction.
 
 \section FrameHookAPICodeExample FrameHook Example Code
-	The example code below attaches an FrameHook on a channel, and then detachs it when
+	The example code below attaches an FrameHook on a channel, and then detaches it when
 	the first ast_frame is read or written to the event callback function.  The Framehook's id
 	is stored on the FrameHook's data pointer so it can be detached within the callback.
 

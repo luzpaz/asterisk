@@ -2134,7 +2134,7 @@ static int create_outgoing_sdp_stream(struct ast_sip_session *session, struct as
 		if (session_media->remotely_held) {
 			attr->name = STR_INACTIVE; /* To place on hold a recvonly stream, send inactive */
 		} else {
-			attr->name = STR_SENDONLY; /* Send sendonly to initate a local hold */
+			attr->name = STR_SENDONLY; /* Send sendonly to initiate a local hold */
 		}
 	} else {
 		if (session_media->remotely_held) {

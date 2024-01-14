@@ -885,7 +885,7 @@ enum ast_bridge_optimization {
 };
 
 /*!
- * \brief Determine if bridges allow for optimization to occur betweem them
+ * \brief Determine if bridges allow for optimization to occur between them
  * \since 12.0.0
  *
  * \param chan_bridge First bridge being tested

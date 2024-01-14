@@ -773,7 +773,7 @@ void ast_bridge_features_merge(struct ast_bridge_features *into, const struct as
 /*!
  * \brief Initialize bridge features structure
  *
- * \param features Bridge featues structure
+ * \param features Bridge features structure
  *
  * \retval 0 on success
  * \retval -1 on failure

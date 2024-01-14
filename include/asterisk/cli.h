@@ -374,7 +374,7 @@ void ast_cli_print_timestr_fromseconds(int fd, int seconds, const char *prefix);
 /*!
  * \brief Allow a CLI command to be executed while Asterisk is shutting down.
  *
- * CLI commands by defeault are disabled when Asterisk is shutting down. This is
+ * CLI commands by default are disabled when Asterisk is shutting down. This is
  * to ensure the safety of the shutdown since CLI commands may attempt to access
  * resources that have been freed as a result of the shutdown.
  *

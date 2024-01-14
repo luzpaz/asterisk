@@ -37,7 +37,7 @@ WAV49	= -DWAV49
 ######### ppro's, etc, as well as the AMD K6 and K7.  The compile will
 ######### probably require gcc.
 
-# Due to the gsm codec beeing broken when compiled with gcc version 4.2
+# Due to the gsm codec being broken when compiled with gcc version 4.2
 # and optimization higher than -O2 we are checking for that version and
 # set the optimization to -O2 in this case.
 

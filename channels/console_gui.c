@@ -563,7 +563,7 @@ static int switch_video_out(struct video_desc *env, int index, Uint8 button)
  * \param env = pointer to the video environment descriptor
  *
  * returns:
- * - 0 on falure switching from off to on
+ * - 0 on failure switching from off to on
  * - 1 on success in switching from off to on
  * - 2 on success in switching from on to off
 */
@@ -1414,7 +1414,7 @@ static void sdl_setup(struct video_desc *env)
 
 	SDL_WM_SetCaption("Asterisk console Video Output", NULL);
 
-	/* intialize the windows for local and remote video */
+	/* initialize the windows for local and remote video */
 	if (set_win(gui->screen, &gui->win[WIN_REMOTE], dpy_fmt,
 			env->rem_dpy.w, env->rem_dpy.h, x0-kp_w/2-BORDER-env->rem_dpy.w, y0))
 		goto no_sdl;

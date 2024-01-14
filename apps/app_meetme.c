@@ -5335,7 +5335,7 @@ static void *recordthread(void *args)
 		if (f->frametype == AST_FRAME_VOICE) {
 			ast_mutex_lock(&cnf->listenlock);
 			for (x = 0; x < AST_FRAME_BITS; x++) {
-				/* Free any translations that have occured */
+				/* Free any translations that have occurred */
 				if (cnf->transframe[x]) {
 					ast_frfree(cnf->transframe[x]);
 					cnf->transframe[x] = NULL;

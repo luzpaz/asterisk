@@ -159,10 +159,7 @@
 			"operations": [
 				{
 					"httpMethod": "GET",
-					"since": [
-						"12.0.0"
-					],
-					"summary": "List available endoints for a given endpoint technology.",
+					"summary": "List available endpoints for a given endpoint technology.",
 					"nickname": "listByTech",
 					"responseClass": "List[Endpoint]",
 					"parameters": [

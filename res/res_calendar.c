@@ -159,7 +159,7 @@
 					<enum name="location"><para>The event location</para></enum>
 					<enum name="categories"><para>The categories of the event</para></enum>
 					<enum name="priority"><para>The priority of the event</para></enum>
-					<enum name="calendar"><para>The name of the calendar associted with the event</para></enum>
+					<enum name="calendar"><para>The name of the calendar associated with the event</para></enum>
 					<enum name="uid"><para>The unique identifier for the event</para></enum>
 					<enum name="start"><para>The start time of the event (in seconds since epoch)</para></enum>
 					<enum name="end"><para>The end time of the event (in seconds since epoch)</para></enum>

@@ -750,12 +750,12 @@ static void send_cluster_notify(void)
 		ast_debug(5, "send_cluster_notify rdlock\n");
 
 		if ((cs_err = corosync_cfg_local_get(cfg_handle, &node_id)) != CS_OK) {
-			ast_log(LOG_WARNING, "Failed to extract Corosync node ID for this node. Not informing cluster of existance.\n");
+			ast_log(LOG_WARNING, "Failed to extract Corosync node ID for this node. Not informing cluster of existence.\n");
 			return;
 		}
 
 		if (((cs_err = corosync_cfg_get_node_addrs(cfg_handle, node_id, 1, &num_addrs, &corosync_addr)) != CS_OK) || (num_addrs < 1)) {
-			ast_log(LOG_WARNING, "Failed to get local Corosync address. Not informing cluster of existance.\n");
+			ast_log(LOG_WARNING, "Failed to get local Corosync address. Not informing cluster of existence.\n");
 			return;
 		}
 
@@ -766,7 +766,7 @@ static void send_cluster_notify(void)
 	sa = (struct sockaddr *)corosync_addr.address;
 	sa_len = (size_t)corosync_addr.address_length;
 	if ((res = getnameinfo(sa, sa_len, buf, sizeof(buf), NULL, 0, NI_NUMERICHOST))) {
-		ast_log(LOG_WARNING, "Failed to determine name of local Corosync address: %s (%d). Not informing cluster of existance.\n",
+		ast_log(LOG_WARNING, "Failed to determine name of local Corosync address: %s (%d). Not informing cluster of existence.\n",
 			gai_strerror(res), res);
 		return;
 	}

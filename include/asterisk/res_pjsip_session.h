@@ -975,7 +975,7 @@ const char *ast_sip_session_get_name(const struct ast_sip_session *session);
 int ast_sip_can_present_connected_id(const struct ast_sip_session *session, const struct ast_party_id *id);
 
 /*!
- * \brief Adds a Reason header in the next reponse to an incoming INVITE
+ * \brief Adds a Reason header in the next response to an incoming INVITE
  *
  * \param session The session
  * \param protocol Usually "SIP" but may be "STIR" for stir-shaken

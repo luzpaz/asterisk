@@ -54,7 +54,7 @@ int ast_pjproject_get_buildopt(char *option, char *format_string, ...) __attribu
  * \brief Begin PJPROJECT log interception for CLI output.
  * \since 13.8.0
  *
- * \param fd CLI file descriptior to send intercepted output.
+ * \param fd CLI file descriptor to send intercepted output.
  *
  * \note ast_pjproject_log_intercept_begin() and
  * ast_pjproject_log_intercept_end() must always be called

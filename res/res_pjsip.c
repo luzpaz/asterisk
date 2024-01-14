@@ -2745,7 +2745,7 @@ static int set_id_from_pai(pjsip_rx_data *rdata, struct ast_party_id *id)
  *
  * \param rdata The incoming message
  * \param[out] id The ID to set
- * \retval 0 Succesfully set the party ID
+ * \retval 0 Successfully set the party ID
  * \retval non-zero Could not set the party ID
  */
 static int set_id_from_rpid(pjsip_rx_data *rdata, struct ast_party_id *id)
@@ -2797,7 +2797,7 @@ static int set_id_from_rpid(pjsip_rx_data *rdata, struct ast_party_id *id)
  *
  * \param rdata The incoming message
  * \param[out] id The ID to set
- * \retval 0 Succesfully set the party ID
+ * \retval 0 Successfully set the party ID
  * \retval non-zero Could not set the party ID
  */
 static int set_id_from_from(struct pjsip_rx_data *rdata, struct ast_party_id *id)
@@ -3603,7 +3603,7 @@ const int ast_sip_hangup_sip2cause(int cause)
 		return AST_CAUSE_BEARERCAPABILITY_NOTAVAIL;
 	default:
 		if (cause < 500 && cause >= 400) {
-			/* 4xx class error that is unknown - someting wrong with our request */
+			/* 4xx class error that is unknown - something wrong with our request */
 			return AST_CAUSE_INTERWORKING;
 		} else if (cause < 600 && cause >= 500) {
 			/* 5xx class error - problem in the remote end */

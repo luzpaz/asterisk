@@ -37,7 +37,7 @@
 #
 # Usage Instructions:
 #   - Press '*' to go up a directory.  If you are in the root music
-#     folder you will be exitted from the script.
+#     folder you will be exited from the script.
 #   - If you have a really long list of files, you can filter the list
 #     at any time by pressing '#' and spelling out a few letters you
 #     expect the files to start with.  For example, if you wanted to
@@ -120,13 +120,13 @@ if (! -e "$FESTIVALCACHE/jukebox_percent.ul") {
 	`echo "Percent" | text2wave -o $FESTIVALCACHE/jukebox_percent.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_generate.ul") {
-	`echo "Please wait while Astrisk Jukebox cashes the files of your music collection" | text2wave -o $FESTIVALCACHE/jukebox_generate.ul -otype ulaw -`;
+	`echo "Please wait while Asterisk Jukebox cashes the files of your music collection" | text2wave -o $FESTIVALCACHE/jukebox_generate.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_invalid.ul") {
 	`echo "You have entered an invalid selection" | text2wave -o $FESTIVALCACHE/jukebox_invalid.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_thankyou.ul") {
-	`echo "Thank you for using Astrisk Jukebox, Goodbye" | text2wave -o $FESTIVALCACHE/jukebox_thankyou.ul -otype ulaw -`;
+	`echo "Thank you for using Asterisk Jukebox, Goodbye" | text2wave -o $FESTIVALCACHE/jukebox_thankyou.ul -otype ulaw -`;
 }
 
 # greet the user

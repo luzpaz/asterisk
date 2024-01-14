@@ -103,7 +103,7 @@ static struct prometheus_metric_wrapper *create_wrapper(const char *key)
  * \internal
  * \brief Get a wrapper by its key
  *
- * \param key The unqiue key for the wrapper
+ * \param key The unique key for the wrapper
  *
  * \retval NULL on no wrapper found :-\
  * \retval wrapper on success
@@ -233,7 +233,7 @@ static void registration_loaded_observer(const char *name, const struct ast_sorc
 		};
 		void *obj;
 
-		ast_debug(1, "Checking for the existance of registration metric %s\n", wrapper->key);
+		ast_debug(1, "Checking for the existence of registration metric %s\n", wrapper->key);
 		obj = ast_sorcery_retrieve_by_fields(ast_sip_get_sorcery(), object_type, AST_RETRIEVE_FLAG_DEFAULT, &search_fields);
 		if (!obj) {
 			ast_debug(1, "Registration metric '%s' not found; purging with prejudice\n", wrapper->key);

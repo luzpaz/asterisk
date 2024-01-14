@@ -245,7 +245,7 @@ int ast_base64encode_full(char *dst, const unsigned char *src, int srclen, int m
 int ast_base64encode(char *dst, const unsigned char *src, int srclen, int max);
 
 /*!
- * \brief Same as ast_base64encode, but does hte math for you and returns
+ * \brief Same as ast_base64encode, but does the math for you and returns
  * an encoded string
  *
  * \note The returned string will need to be freed later
@@ -705,7 +705,7 @@ struct ast_http_digest {
 /*!
  * \brief Parse digest authorization header.
  * \return -1 if we have no auth or something wrong with digest.
- * \note This function may be used for Digest request and responce header.
+ * \note This function may be used for Digest request and response header.
  * request arg is set to nonzero, if we parse Digest Request.
  * pedantic arg can be set to nonzero if we need to do addition Digest check.
  */
@@ -1098,7 +1098,7 @@ int ast_pipe_nonblock(int filedes[2]);
  * \param is_user_interface Non-zero to mark the thread as a user interface.
  *
  * \retval True (non-zero) if marking current thread failed.
- * \retval False (zero) if successfuly marked current thread.
+ * \retval False (zero) if successfully marked current thread.
  */
 int ast_thread_user_interface_set(int is_user_interface);
 

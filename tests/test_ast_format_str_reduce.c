@@ -108,7 +108,7 @@ AST_TEST_DEFINE(ast_format_str_reduce_test_1)
 	for (i = 0; fail_strings[i]; i++) {
 		c = ast_strdupa(fail_strings[i]);
 		if ((c = ast_format_str_reduce(c))) {
-			ast_test_status_update(test, "ast_format_str_reduce() succeded on string '%s' "
+			ast_test_status_update(test, "ast_format_str_reduce() succeeded on string '%s' "
 					"with result '%s', but we expected it to fail\n",
 					fail_strings[i], c);
 			return AST_TEST_FAIL;

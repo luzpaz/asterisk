@@ -42,7 +42,7 @@
 #define ASN_OK_FRAG       2      /* message fragment detected            */
 #define ASN_E_BUFOVFLW   -1      /* encode buffer overflow               */
 #define ASN_E_ENDOFBUF   -2      /* unexpected end of buffer on decode   */
-#define ASN_E_IDNOTFOU   -3      /* identifer not found                  */
+#define ASN_E_IDNOTFOU   -3      /* identifier not found                  */
 #define ASN_E_INVOBJID   -4      /* invalid object identifier            */
 #define ASN_E_INVLEN     -5      /* invalid field length                 */
 #define ASN_E_INVENUM    -6      /* enumerated value not in defined set  */
@@ -894,7 +894,7 @@ memHeapFreeAll(&(pctxt)->pTypeMemHeap)
  * <p>The difference between this and the ASN1MEMFREE macro is that the
  * memory blocks held within the context are not actually freed.  Internal
  * pointers are reset so the existing blocks can be reused.  This can
- * provide a performace improvement for repetitive tasks such as decoding
+ * provide a performance improvement for repetitive tasks such as decoding
  * messages in a loop.
  *
  * @param pctxt - Pointer to a context block

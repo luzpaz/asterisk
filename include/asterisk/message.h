@@ -106,7 +106,7 @@ struct ast_msg_handler {
 	 *
 	 * \param msg The message to handle
 	 *
-	 * \retval 0 The handler processed the message successfull
+	 * \retval 0 The handler processed the message successfully
 	 * \retval non-zero The handler passed or could not process the message
 	 */
 	int (* const handle_msg)(struct ast_msg *msg);
@@ -285,7 +285,7 @@ const char *ast_msg_get_var(struct ast_msg *msg, const char *name);
  * \note The return value is valid only as long as the ast_message is valid. Hold a reference
  *       to the message if you plan on storing the return value.
  *
- * \return The body of the messsage, encoded in UTF-8.
+ * \return The body of the message, encoded in UTF-8.
  */
 const char *ast_msg_get_body(const struct ast_msg *msg);
 
@@ -294,7 +294,7 @@ const char *ast_msg_get_body(const struct ast_msg *msg);
  *
  * \since 12.5.0
  *
- * \param msg The message to get the soure from
+ * \param msg The message to get the source from
  *
  * \return The source of the message
  * \retval NULL or empty string if the message has no source
@@ -352,7 +352,7 @@ int ast_msg_has_destination(const struct ast_msg *msg);
 /*!
  * \brief Queue a message for routing through the dialplan.
  *
- * Regardless of the return value of this function, this funciton will take
+ * Regardless of the return value of this function, this function will take
  * care of ensuring that the message object is properly destroyed when needed.
  *
  * \retval 0 message successfully queued
@@ -363,7 +363,7 @@ int ast_msg_queue(struct ast_msg *msg);
 /*!
  * \brief Send a msg directly to an endpoint.
  *
- * Regardless of the return value of this function, this funciton will take
+ * Regardless of the return value of this function, this function will take
  * care of ensuring that the message object is properly destroyed when needed.
  *
  * \retval 0 message successfully queued to be sent out

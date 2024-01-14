@@ -30,7 +30,7 @@
  * to/from Asterisk. While this is a very useful concept for end users, it is
  * surprisingly \a not a core concept within Asterisk itself.
  *
- * This file defines \ref ast_endpoint as a seperate object, which channel
+ * This file defines \ref ast_endpoint as a separate object, which channel
  * drivers may use to expose their concept of an endpoint. As the channel driver
  * creates channels, it can use ast_endpoint_add_channel() to associate channels
  * to the endpoint. This updates the endpoint appropriately, and forwards all of

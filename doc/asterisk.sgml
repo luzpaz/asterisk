@@ -201,7 +201,7 @@
     <term>-i</term>
     <listitem>
      <para>
-      Prompt user to intialize any encrypted private keys for IAX2
+      Prompt user to initialize any encrypted private keys for IAX2
       secure authentication during startup.
      </para>
     </listitem>

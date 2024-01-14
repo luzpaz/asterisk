@@ -47,7 +47,7 @@ struct system_config {
 		int auto_increment;
 		/*! Thread idle timeout in seconds */
 		int idle_timeout;
-		/*! Maxumum number of threads in the threadpool */
+		/*! Maximum number of threads in the threadpool */
 		int max_size;
 	} threadpool;
 	/*! Nonzero to disable switching from UDP to TCP transport */

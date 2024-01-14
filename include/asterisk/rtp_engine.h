@@ -562,7 +562,7 @@ struct ast_rtp_engine_ice {
 
 /*! \brief DTLS setup types */
 enum ast_rtp_dtls_setup {
-	AST_RTP_DTLS_SETUP_ACTIVE,   /*!< Endpoint is willing to inititate connections */
+	AST_RTP_DTLS_SETUP_ACTIVE,   /*!< Endpoint is willing to initiate connections */
 	AST_RTP_DTLS_SETUP_PASSIVE,  /*!< Endpoint is willing to accept connections */
 	AST_RTP_DTLS_SETUP_ACTPASS,  /*!< Endpoint is willing to both accept and initiate connections */
 	AST_RTP_DTLS_SETUP_HOLDCONN, /*!< Endpoint does not want the connection to be established right now */
@@ -1579,7 +1579,7 @@ void ast_rtp_codecs_payloads_set_m_type(struct ast_rtp_codecs *codecs, struct as
  * \param options Optional options that may change the behavior of this specific payload
  *
  * \retval 0 success
- * \retval -1 failure, invalid payload numbe
+ * \retval -1 failure, invalid payload number
  * \retval -2 failure, unknown mimetype
  *
  * Example usage:

@@ -273,7 +273,7 @@ int ast_sched_replace_variable(int old_id, struct ast_sched_context *con, int wh
 /*!
  * \brief Find a sched structure and return the data field associated with it.
  *
- * \param con scheduling context in which to search fro the matching id
+ * \param con scheduling context in which to search for the matching id
  * \param id ID of the scheduled item to find
  *
  * \retval NULL if not found

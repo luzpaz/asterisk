@@ -596,7 +596,7 @@ usecallerid=yes
 ;     polarity_IN = polarity reversal signals the start, for India,
 ;                   for dtmf dialtone detection; using DTMF.
 ;     dtmf        = causes monitor loop to look for dtmf energy on the
-;                   incoming channel to initate cid acquisition
+;                   incoming channel to initiate cid acquisition
 ;
 ;cidstart=polarity
 ;

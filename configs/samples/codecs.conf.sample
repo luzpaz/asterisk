@@ -108,7 +108,7 @@ packetloss_percentage=10   ; Estimated packet loss percentage in uplink directio
                            ; The higher the percentage, the larger amount of bandwidth is
                            ; used. Default is 0%, 10% is recommended when fec is in use.
 
-maxbitrate=10000    ; Use the table below to make sure a useful bitrate is choosen
+maxbitrate=10000    ; Use the table below to make sure a useful bitrate is chosen
                     ; for maxbitrate.  If not set or value is not within the bounds
                     ; of the encoder, a default value is chosen.
                     ;

@@ -1867,7 +1867,7 @@ int ast_sip_initialize_sorcery_transport(void)
 	ast_sip_register_cli_formatter(cli_formatter);
 	ast_cli_register_multiple(cli_commands, ARRAY_LEN(cli_commands));
 
-	/* trigger load of transports from realtime by trying to revrieve them all */
+	/* trigger load of transports from realtime by trying to retrieve them all */
 	transports = ast_sorcery_retrieve_by_fields(sorcery, "transport", AST_RETRIEVE_FLAG_ALL | AST_RETRIEVE_FLAG_MULTIPLE, NULL);
 	ao2_cleanup(transports);
 

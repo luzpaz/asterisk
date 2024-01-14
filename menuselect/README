@@ -118,7 +118,7 @@ Category Attributes:
    be in the output from menuselect.
 
    displayname="Applications"
-   If this is specfied, this is what will be shown in the menu to the user.
+   If this is specified, this is what will be shown in the menu to the user.
 
    positive_output="yes"
    The default for menuselect is to output all of the members of a category

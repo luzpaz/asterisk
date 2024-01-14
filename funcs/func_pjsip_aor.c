@@ -66,7 +66,7 @@
 				</para></note>
 				<note><para>
 					The return value of the <literal>contact</literal> parameter is
-					one or more internal contact IDs separated by commans.
+					one or more internal contact IDs separated by commas.
 					To get details about the contact itself, including the URI,
 					call the <literal>PJSIP_CONTACT</literal> dialplan function
 					with the contact ID and the desired contact parameter.

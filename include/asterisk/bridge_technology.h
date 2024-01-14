@@ -236,7 +236,7 @@ int __ast_bridge_technology_register(struct ast_bridge_technology *technology, s
  * ast_bridge_technology_unregister(&simple_bridge_tech);
  * \endcode
  *
- * This unregisters a bridge technlogy declared as the structure
+ * This unregisters a bridge technology declared as the structure
  * simple_bridge_tech with the bridging core. It will no longer be
  * considered when creating a new bridge.
  */

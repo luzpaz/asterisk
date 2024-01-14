@@ -137,7 +137,7 @@ void ast_manager_unregister_hook(struct manager_custom_hook *hook);
 
 /*! \brief Registered hooks can call this function to invoke actions and they will receive responses through registered callback
  * \param hook the file identifier specified in manager_custom_hook struct when registering a hook
- * \param msg ami action mesage string e.g. "Action: SipPeers\r\n"
+ * \param msg ami action message string e.g. "Action: SipPeers\r\n"
 
  * \retval 0 on Success
  * \retval non-zero on Failure
@@ -331,7 +331,7 @@ void astman_send_listack(struct mansession *s, const struct message *m, char *ms
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  */
 void astman_send_list_complete_start(struct mansession *s, const struct message *m, const char *event_name, int count);
@@ -346,7 +346,7 @@ void astman_send_list_complete_start(struct mansession *s, const struct message 
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  */
 void astman_send_list_complete_end(struct mansession *s);

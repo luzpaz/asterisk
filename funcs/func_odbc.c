@@ -64,7 +64,7 @@
 			<para>This also sets <variable>ODBC_FETCH_STATUS</variable>.</para>
 			<variablelist>
 				<variable name="ODBC_FETCH_STATUS">
-					<value name="SUCESS">
+					<value name="SUCCESS">
 						If rows are available.
 					</value>
 					<value name="FAILURE">
@@ -79,7 +79,7 @@
 			<version>1.6.0</version>
 		</since>
 		<synopsis>
-			Clear the resultset of a sucessful multirow query.
+			Clear the resultset of a successful multirow query.
 		</synopsis>
 		<syntax>
 			<parameter name="result-id" required="true" />

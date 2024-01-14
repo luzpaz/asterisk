@@ -198,8 +198,8 @@ static int startelm(void *userdata, int parent, const char *nspace, const char *
 
 		ast_debug(3, "EWS: XML: <RootFolder>\n");
 		if (sscanf(ne_xml_get_attr(ctx->parser, atts, NULL, "TotalItemsInView"), "%u", &items) != 1) {
-			/* Couldn't read enything */
-			ne_xml_set_error(ctx->parser, "Could't read number of events.");
+			/* Couldn't read anything */
+			ne_xml_set_error(ctx->parser, "Couldn't read number of events.");
 			return NE_XML_ABORT;
 		}
 
@@ -340,7 +340,7 @@ static int cdata(void *userdata, int state, const char *cdata, size_t len)
 	}
 
 	if (!ctx->cdata) {
-		ast_log(LOG_ERROR, "String for storing CDATA is unitialized!\n");
+		ast_log(LOG_ERROR, "String for storing CDATA is uninitialized!\n");
 		return 1;
 	}
 
@@ -906,7 +906,7 @@ static void *ewscal_load_calendar(void *void_data)
 
 static int load_module(void)
 {
-	/* Actualy, 0.29.1 is required (because of NTLM authentication), but this
+	/* Actually, 0.29.1 is required (because of NTLM authentication), but this
 	 * function does not support matching patch version.
 	 *
 	 * The ne_version_match function returns non-zero if the library

@@ -212,7 +212,7 @@
  *	exten => 1234,1,set(xmasattribute=tomtegröt)
  *
  * - Some channels also supports setting channel variables with the \b setvar=
- *   configuraiton option for a device or line.
+ *   configuration option for a device or line.
  *
  * \section AstChanVar_globalvars Global Variables
  * Global variables can also be set in the [globals] section of extensions.conf. The

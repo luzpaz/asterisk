@@ -76,7 +76,7 @@ GML:          [RFC4119] [RFC5491] [GeoShape]
               outgoing INVITE messages in addition to any SDP.
 
 URI:          [RFC6442]
-              The external URI at which the the location information
+              The external URI at which the location information
               can be found.  For chan_pjsip, this URI will be placed
               in a "Geolocation" header in outgoing INVITE messages.
 

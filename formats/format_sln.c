@@ -97,7 +97,7 @@ static int slinear_seek(struct ast_filestream *fs, off_t sample_offset, int when
 	if (whence != SEEK_FORCECUR) {
 		offset = (offset > max)?max:offset;
 	}
-	/* always protect against seeking past begining. */
+	/* always protect against seeking past beginning. */
 	offset = (offset < min)?min:offset;
 	return fseeko(fs->f, offset, SEEK_SET);
 }

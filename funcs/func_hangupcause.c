@@ -18,7 +18,7 @@
 
 /*! \file
  *
- * \brief Functions related to retreiving per-channel hangupcause information
+ * \brief Functions related to retrieving per-channel hangupcause information
  *
  * \author Kinsey Moore <kmoore@digium.com>
  * \ingroup functions

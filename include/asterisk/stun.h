@@ -111,7 +111,7 @@ typedef int (stun_cb_f)(struct stun_attr *attr, void *arg);
  * the externally visible address of the request.
  * If a callback is specified, invoke it with the attribute.
  *
- * \retval AST_STUN_ACCEPT if responed to a STUN request
+ * \retval AST_STUN_ACCEPT if responded to a STUN request
  * \retval AST_STUN_IGNORE
  * \retval -1 on error
  */

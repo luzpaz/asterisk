@@ -221,7 +221,7 @@ static int background_detect_exec(struct ast_channel *chan, const char *data)
 						}
 					} else {
 						if (!notsilent) {
-							/* Heard some audio, mark the begining of the token */
+							/* Heard some audio, mark the beginning of the token */
 							start = ast_tvnow();
 							ast_debug(1, "Start of voice token!\n");
 							notsilent = 1;

@@ -50,7 +50,7 @@
 ;
 ; The 'language' keyword changes the language which are used for error and
 ; information messages returned by SQL Server.  Each database and user has their
-; own default value, and this default can be overriden here.
+; own default value, and this default can be overridden here.
 ;
 ; Accepted value: Any language installed on the target SQL Server.
 ; Default value:  Server default
@@ -61,7 +61,7 @@
 ;
 ; The 'charset' setting is used to change the character set used when connecting
 ; to the database server.  Each database and database user has their own
-; character set setting, and this default can be overriden here.
+; character set setting, and this default can be overridden here.
 ;
 ; Accepted value: Any valid character set available on the target server.
 ; Default value:  Server setting

@@ -1720,7 +1720,7 @@ void pbx_live_dangerously(int new_live_dangerously);
  * which cause privilege escalations. If pbx_live_dangerously() has been
  * called, this function has no effect.
  *
- * \return 0 if successfuly marked current thread.
+ * \return 0 if successfully marked current thread.
  * \return Non-zero if marking current thread failed.
  */
 int ast_thread_inhibit_escalations(void);

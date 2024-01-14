@@ -286,7 +286,7 @@ struct ast_geoloc_eprofile *ast_geoloc_datastore_get_eprofile(struct ast_datasto
  * \param ds The datastore
  * \param ix The index
  *
- * \return 0 if succesful, -1 otherwise.
+ * \return 0 if successful, -1 otherwise.
  */
 int ast_geoloc_datastore_delete_eprofile(struct ast_datastore *ds, int ix);
 

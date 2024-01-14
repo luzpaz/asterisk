@@ -62,7 +62,7 @@ LOGFILES=(/var/log/asterisk/messages* /var/log/asterisk/queue* \
 
 # ast_loggrabber converts POSIX timestamps to readable format
 # using this Python strftime format string.  If not specified
-# or an empty string, no format covnersion is done.
+# or an empty string, no format conversion is done.
 LOG_DATEFORMAT="%m/%d-%H:%M:%S.%f"
 
 # The timezone to use when converting POSIX timestamps to

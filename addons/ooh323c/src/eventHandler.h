@@ -92,7 +92,7 @@ typedef void (*BoolValue) (ASN1BOOL value);
 
 /**
  * This is a function pointer for a callback function which is invoked from
- * within a decode function when a value of the INTERGER ASN.1 type is parsed.
+ * within a decode function when a value of the INTEGER ASN.1 type is parsed.
  *
  * @param value        Parsed value.
  * @return             - none
@@ -170,7 +170,7 @@ typedef void (*NullValue) (void) ;
 
 /**
  * This is a function pointer for a callback function which is invoked from
- * within a decode function whn a value the OBJECT IDENTIFIER ASN.1 type is
+ * within a decode function when a value the OBJECT IDENTIFIER ASN.1 type is
  * parsed.
  *
  * @param numSubIds    Number of subidentifiers in the object identifier.

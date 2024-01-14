@@ -369,7 +369,7 @@ EXTERN int ooPDWrite(struct pollfd *pfds, int nfds, int fd);
 /* EXTERN int ooSocketConvertIpToNwAddr(char *inetIp, unsigned char *netIp); */
 
 /**
- * This function retrives the IP address of the local host.
+ * This function retrieves the IP address of the local host.
  *
  * @param pIPAddrs   Pointer to a char buffer in which local IP address will be
  *                   returned.

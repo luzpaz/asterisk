@@ -960,7 +960,7 @@ struct ast_variable *ast_variable_list_append_hint(struct ast_variable **head, s
  * same name.
  *
  * \retval 0 if a variable was replaced in the list
- * \retval -1 if no replacement occured
+ * \retval -1 if no replacement occurred
  *
  * \note The variable name comparison is performed case-sensitively
  * \note If a variable is replaced, its memory is freed.
@@ -976,7 +976,7 @@ int ast_variable_list_replace(struct ast_variable **head, struct ast_variable *r
  * \param newvar A pointer to the new variable that will replace the old one.
  *
  * \retval 0 if a variable was replaced in the list
- * \retval -1 if no replacement occured
+ * \retval -1 if no replacement occurred
  *
  * \note The search for the old variable is done simply on the pointer.
  * \note If a variable is replaced, its memory is freed.

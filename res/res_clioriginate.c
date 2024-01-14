@@ -42,7 +42,7 @@
 #define TIMEOUT 30
 
 /*!
- * \brief orginate a call from the CLI
+ * \brief originate a call from the CLI
  * \param fd file descriptor for cli
  * \param chan channel to create type/data
  * \param app application you want to run
@@ -81,7 +81,7 @@ static char *orig_app(int fd, const char *chan, const char *app, const char *app
 }
 
 /*!
- * \brief orginate from extension
+ * \brief originate from extension
  * \param fd file descriptor for cli
  * \param chan channel to create type/data
  * \param data contains exten\@context

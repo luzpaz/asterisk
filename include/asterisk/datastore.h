@@ -73,7 +73,7 @@ struct ast_datastore {
 /*!
  * \brief Create a data store object
  * \param[in] info information describing the data store object
- * \param[in] uid unique identifer
+ * \param[in] uid unique identifier
  * \param[in] mod The module to hold until this datastore is freed.
  * \param file, line, function
  * \version 1.6.1 moved here and renamed from ast_channel_datastore_alloc

@@ -1116,7 +1116,7 @@ static int sound_file_exists(const char *filename)
  * \param user Optional Caller
  * \param bridge_channel The bridged channel involved
  *
- * \note if caller is NULL, the announcment will be sent to all participants in the conference.
+ * \note if caller is NULL, the announcement will be sent to all participants in the conference.
  * \retval 0 on success.
  * \retval -1 if the user hung up.
  */
@@ -3062,7 +3062,7 @@ static int action_toggle_mute_participants(struct confbridge_conference *confere
 		conference->b_profile.sounds);
 
 	if (strcmp(conference->b_profile.language, ast_channel_language(user->chan))) {
-		/* The host needs to hear it seperately, as they don't get the audio from play_sound_helper */
+		/* The host needs to hear it separately, as they don't get the audio from play_sound_helper */
 		ast_stream_and_wait(user->chan, sound_to_play, "");
 
 		/* Announce to the group that all participants are muted */

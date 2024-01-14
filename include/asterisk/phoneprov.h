@@ -54,7 +54,7 @@ enum ast_phoneprov_std_variables {
 };
 
 /*!
- * \brief Returns the string respresentation of a phoneprov standard variable.
+ * \brief Returns the string representation of a phoneprov standard variable.
  * \param var One of enum ast_phoneprov_std_variables
  *
  * \return The string representation or NULL if not found.

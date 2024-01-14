@@ -207,7 +207,7 @@ static int transport_create(void *data)
 	}
 
 	/*
-	 * The type_name here is mostly used by log messages eihter in
+	 * The type_name here is mostly used by log messages either in
 	 * pjproject or Asterisk.  Other places are reconstituting subscriptions
 	 * after a restart (which could never work for a websocket connection anyway),
 	 * received MESSAGE requests to set PJSIP_TRANSPORT, and most importantly

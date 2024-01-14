@@ -1,6 +1,6 @@
 # AST_CXX_CHECK_STD([standard], [force latest std?])
-# Check if the C++ compiler supprts a specific standard.
-# If the second argument is "yes", forse the compiler to
+# Check if the C++ compiler supports a specific standard.
+# If the second argument is "yes", force the compiler to
 # use the latest standard it supports by keeping the last
 # -std=gnu++=XX option that worked.
 AC_DEFUN([AST_CXX_CHECK_STD],

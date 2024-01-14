@@ -404,10 +404,165 @@ static pj_status_t set_auth_creds(const char *id, pjsip_auth_clt_sess *auth_sess
 	 */
 	while ((auth_hdr = pjsip_msg_find_hdr(challenge->msg_info.msg,
 		search_type, auth_hdr ? auth_hdr->next : NULL))) {
+		int exact_match_index = -1;
+		int wildcard_match_index = -1;
+		int match_index = 0;
+		pjsip_cred_info auth_cred;
+		struct ast_sip_auth *auth = NULL;
 
-		get_creds_for_header(id, src_name, auth_hdr, auth_object_count,
-			auth_objects_vector, &auth_creds, realms);
+		memset(&auth_cred, 0, sizeof(auth_cred));
+		/*
+		 * Since we only support the MD5 algorithm at the current time,
+		 * there's no sense searching for auth objects that match the algorithm.
+		 * In fact, the auth_object structure doesn't even have a member
+		 * for it.
+		 *
+		 * When we do support more algorithms, this check will need to be
+		 * moved inside the auth object loop below.
+		 *
+		 * Note: The header may not have specified an algorithm at all in which
+		 * case it's assumed to be MD5. is_digest_algorithm_supported() returns
+		 * true for that case.
+		 */
+		if (!is_digest_algorithm_supported(auth_hdr)) {
+			ast_debug(3, "Skipping header with realm '%.*s' and unsupported '%.*s' algorithm \n",
+				(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr,
+				(int)auth_hdr->challenge.digest.algorithm.slen, auth_hdr->challenge.digest.algorithm.ptr);
+			continue;
+		}
 
+		/*
+		 * Appending the realms is strictly so digest_create_request_with_auth()
+		 * can display good error messages.  Since we only support one algorithm,
+		 * there can't be more than one header with the same realm.  No need to worry
+		 * about duplicate realms until then.
+		 */
+		if (*realms) {
+			ast_str_append(realms, 0, "%.*s, ",
+				(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr);
+		}
+
+		ast_debug(3, "Searching auths to find matching ones for header with realm '%.*s' and algorithm '%.*s'\n",
+			(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr,
+			(int)auth_hdr->challenge.digest.algorithm.slen, auth_hdr->challenge.digest.algorithm.ptr);
+
+		/*
+		 * Now that we have a valid header, we can loop over the auths available to
+		 * find either an exact realm match or, failing that, a wildcard auth (an
+		 * auth with an empty or "*" realm).
+		 *
+		 * NOTE: We never use the global default realm when we're the UAC responding
+		 * to a 401 or 407.  We only use that when we're the UAS (handled elsewhere)
+		 * and the auth object didn't have a realm.
+		 */
+		for (i = 0; i < auth_object_count; ++i) {
+			auth = AST_VECTOR_GET(auth_objects_vector, i);
+
+			/*
+			 * If this auth object's realm exactly matches the one
+			 * from the header, we can just break out and use it.
+			 *
+			 * NOTE: If there's more than one auth object for an endpoint with
+			 * a matching realm it's a misconfiguration.  We'll only use the first.
+			 */
+			if (pj_stricmp2(&auth_hdr->challenge.digest.realm, auth->realm) == 0) {
+				ast_debug(3, "Found matching auth '%s' with realm '%s'\n", ast_sorcery_object_get_id(auth),
+					auth->realm);
+				exact_match_index = i;
+				/*
+				 * If we found an exact realm match, there's no need to keep
+				 * looking for a wildcard.
+				 */
+				break;
+			}
+
+			/*
+			 * If this auth object's realm is empty or a "*", it's a wildcard
+			 * auth object.  We going to save its index but keep iterating over
+			 * the vector in case we find an exact match later.
+			 *
+			 * NOTE: If there's more than one wildcard auth object for an endpoint
+			 * it's a misconfiguration.  We'll only use the first.
+			 */
+			if (wildcard_match_index < 0
+				&& (ast_strlen_zero(auth->realm) || ast_strings_equal(auth->realm, "*"))) {
+				ast_debug(3, "Found wildcard auth '%s' for realm '%.*s'\n", ast_sorcery_object_get_id(auth),
+					(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr);
+				wildcard_match_index = i;
+			}
+		}
+
+		if (exact_match_index < 0 && wildcard_match_index < 0) {
+			/*
+			 * Didn't find either a wildcard or an exact realm match.
+			 * Move on to the next header.
+			 */
+			ast_debug(3, "No auth matching realm or no wildcard found for realm '%.*s'\n",
+				(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr);
+			continue;
+		}
+
+		if (exact_match_index >= 0) {
+			/*
+			 * If we found an exact match, we'll always prefer that.
+			 */
+			match_index = exact_match_index;
+			auth = AST_VECTOR_GET(auth_objects_vector, match_index);
+			ast_debug(3, "Using matched auth '%s' with realm '%.*s'\n", ast_sorcery_object_get_id(auth),
+				(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr);
+		} else {
+			/*
+			 * We'll only use the wildcard if we didn't find an exact match.
+			 */
+			match_index = wildcard_match_index;
+			auth = AST_VECTOR_GET(auth_objects_vector, match_index);
+			ast_debug(3, "Using wildcard auth '%s' for realm '%.*s'\n", ast_sorcery_object_get_id(auth),
+				(int)auth_hdr->challenge.digest.realm.slen, auth_hdr->challenge.digest.realm.ptr);
+		}
+
+		/*
+		 * Copy the fields from the auth_object to the
+		 * pjsip_cred_info structure.
+		 */
+		auth_cred.realm = auth_hdr->challenge.common.realm;
+		pj_cstr(&auth_cred.username, auth->auth_user);
+		pj_cstr(&auth_cred.scheme, "digest");
+		switch (auth->type) {
+		case AST_SIP_AUTH_TYPE_USER_PASS:
+			pj_cstr(&auth_cred.data, auth->auth_pass);
+			auth_cred.data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
+			break;
+		case AST_SIP_AUTH_TYPE_MD5:
+			pj_cstr(&auth_cred.data, auth->md5_creds);
+			auth_cred.data_type = PJSIP_CRED_DATA_DIGEST;
+			break;
+		case AST_SIP_AUTH_TYPE_GOOGLE_OAUTH:
+			/* nothing to do. handled separately in res_pjsip_outbound_registration */
+			break;
+		case AST_SIP_AUTH_TYPE_ARTIFICIAL:
+			ast_log(LOG_ERROR,
+				"Trying to set artificial outbound auth credentials shouldn't happen.\n");
+			continue;
+		} /* End auth object loop */
+
+		/*
+		 * Because the vector contains actual structures and not pointers
+		 * to structures, the call to AST_VECTOR_APPEND results in a simple
+		 * assign of one structure to another, effectively copying the auth_cred
+		 * structure contents to the array element.
+		 *
+		 * Also note that the calls to pj_cstr above set their respective
+		 * auth_cred fields to the _pointers_ of their corresponding auth
+		 * object fields.  This is safe because the call to
+		 * pjsip_auth_clt_set_credentials() below strdups them before we
+		 * return to the calling function which decrements the reference
+		 * counts.
+		 */
+		res = AST_VECTOR_APPEND(&auth_creds, auth_cred);
+		if (res != PJ_SUCCESS) {
+			res = PJ_ENOMEM;
+			goto cleanup;
+		}
 	} /* End header loop */
 
 	if (*realms && ast_str_strlen(*realms)) {

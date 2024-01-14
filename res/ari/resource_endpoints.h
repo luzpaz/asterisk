@@ -117,7 +117,7 @@ struct ast_ari_endpoints_list_by_tech_args {
 	const char *tech;
 };
 /*!
- * \brief List available endoints for a given endpoint technology.
+ * \brief List available endpoints for a given endpoint technology.
  *
  * \param headers HTTP headers
  * \param args Swagger parameters

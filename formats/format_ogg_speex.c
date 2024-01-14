@@ -110,7 +110,7 @@ static int read_packet(struct ast_filestream *fs)
 					"Corrupt or missing data in bitstream; continuing...\n");
 			}
 
-			/* No, we need to read more data from the file descrptor */
+			/* No, we need to read more data from the file descriptor */
 			/* get a buffer from OGG to read the data into */
 			buffer = ogg_sync_buffer(&s->oy, BLOCK_SIZE);
 			bytes = fread(buffer, 1, BLOCK_SIZE, fs->f);

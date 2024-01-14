@@ -921,7 +921,7 @@ struct ast_cc_agent_callbacks {
 	 * if there is some error when attempting to process
 	 * the incoming CC request.
 	 *
-	 * The duty of this is to issue a propper response to a
+	 * The duty of this is to issue a proper response to a
 	 * CC request from the caller by acknowledging receipt
 	 * of that request or rejecting it.
 	 */

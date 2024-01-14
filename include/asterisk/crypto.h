@@ -49,7 +49,7 @@ typedef struct aes_key ast_aes_decrypt_key;
 /*!
  * \brief Retrieve a key
  * \param kname Name of the key we are retrieving
- * \param ktype Intger type of key (AST_KEY_PUBLIC or AST_KEY_PRIVATE)
+ * \param ktype Integer type of key (AST_KEY_PUBLIC or AST_KEY_PRIVATE)
  *
  * \retval the key on success.
  * \retval NULL on failure.

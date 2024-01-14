@@ -1309,7 +1309,7 @@ int ooH245Receive(OOH323CallData *call)
                              1st octet - msgType, next 4 octets - tpkt header,
                              followed by encoded msg
       Q931 message facility
-                             1st octect - OOFacility, 2nd octet - tunneled msg
+                             1st octet - OOFacility, 2nd octet - tunneled msg
                              type(in case no tunneled msg - OOFacility),
                              3rd and 4th octet - associated logical channel
                              of the tunneled msg(0 when no channel is

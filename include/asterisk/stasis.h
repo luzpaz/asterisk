@@ -33,7 +33,7 @@
  *
  * The Stasis Message Bus is a loosely typed mechanism for distributing messages
  * within Asterisk. It is designed to be:
- *  - Loosely coupled; new message types can be added in seperate modules.
+ *  - Loosely coupled; new message types can be added in separate modules.
  *  - Easy to use; publishing and subscribing are straightforward operations.
  *
  * There are three main concepts for using the Stasis Message Bus:
@@ -1013,7 +1013,7 @@ typedef const char *(*snapshot_get_id)(struct stasis_message *message);
  * \since 12.2.0
  *
  * \param entry Cache entry to calculate a new aggregate snapshot.
- * \param new_snapshot The shapshot that is being updated.
+ * \param new_snapshot The snapshot that is being updated.
  *
  * \note Return a ref bumped pointer from stasis_cache_entry_get_aggregate()
  * if a new aggregate could not be calculated because of error.
@@ -1040,7 +1040,7 @@ typedef struct stasis_message *(*cache_aggregate_calc_fn)(struct stasis_cache_en
  *
  * \param topic The aggregate message may be published to this topic.
  *        It is the topic to which the cache itself is subscribed.
- * \param aggregate The aggregate shapshot message to publish.
+ * \param aggregate The aggregate snapshot message to publish.
  *
  * \note It is up to the function to determine if there is a better topic
  * the aggregate message should be published over.

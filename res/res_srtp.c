@@ -847,7 +847,7 @@ static int res_sdp_crypto_parse_offer(struct ast_rtp_instance *rtp, struct ast_s
 	}
 
 	/* On egress, Asterisk sent several crypto lines in the SIP/SDP offer
-	   The remote party might have choosen another line than the first */
+	   The remote party might have chosen another line than the first */
 	for (tmp = srtp; tmp && tmp->crypto && tmp->crypto->tag != tag_from_sdp;) {
 		tmp = AST_LIST_NEXT(tmp, sdp_srtp_list);
 	}

@@ -85,7 +85,7 @@ struct ast_format_def {
 	 * required size (in bytes) and the support routine will allocate them
 	 * for you, pointed by s->buf and s->private, respectively.
 	 * When allocating a buffer, remember to leave AST_FRIENDLY_OFFSET
-	 * spare bytes at the bginning.
+	 * spare bytes at the beginning.
 	 */
 	int buf_size;			/*!< size of frame buffer, if any, aligned to 8 bytes. */
 	int desc_size;			/*!< size of private descriptor, if any */

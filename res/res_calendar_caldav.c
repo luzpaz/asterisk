@@ -433,9 +433,9 @@ static void caldav_add_event(icalcomponent *comp, struct icaltime_span *span, vo
 	}
 
 
-	/* Only set values for alarm based on VALARM.  Can be overriden in main/calendar.c by autoreminder
+	/* Only set values for alarm based on VALARM.  Can be overridden in main/calendar.c by autoreminder
 	 * therefore, go ahead and add events even if their is no VALARM or it is malformed
-	 * Currently we are only getting the first VALARM and are handling repitition in main/calendar.c from calendar.conf */
+	 * Currently we are only getting the first VALARM and are handling repetition in main/calendar.c from calendar.conf */
 	if (!(valarm = icalcomponent_get_first_component(comp, ICAL_VALARM_COMPONENT))) {
 		ao2_link(pvt->events, event);
 		event = ast_calendar_unref_event(event);

@@ -53,7 +53,7 @@ struct ast_ari_response;
  * \param ser TCP/TLS session object
  * \param get_params GET parameters from the HTTP request.
  * \param path_vars Path variables from any wildcard path segments.
- * \param headers HTTP headers from the HTTP requiest.
+ * \param headers HTTP headers from the HTTP request.
  * \param body
  * \param[out] response The RESTful response.
  */
@@ -67,12 +67,12 @@ typedef void (*stasis_rest_callback)(
  * \brief Handler for a single RESTful path segment.
  */
 struct stasis_rest_handlers {
-	/*! Path segement to handle */
+	/*! Path segment to handle */
 	const char *path_segment;
 	/*! If true (non-zero), path_segment is a wildcard, and will match all
 	 * values.
 	 *
-	 * Value of the segement will be passed into the \a path_vars parameter
+	 * Value of the segment will be passed into the \a path_vars parameter
 	 * of the callback.
 	 */
 	int is_wildcard;
@@ -92,7 +92,7 @@ struct stasis_rest_handlers {
 struct ast_ari_response {
 	/*! Response message */
 	struct ast_json *message;
-	/*! \\r\\n seperated response headers */
+	/*! \\r\\n separated response headers */
 	struct ast_str *headers;
 	/*! HTTP response code.
 	 * See http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html */

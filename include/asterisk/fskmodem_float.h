@@ -63,7 +63,7 @@ typedef struct {
    overwritten with the number of bytes left that were not consumed.
    \retval 0 Still looking for something...
    \retval 1 An output byte was received and stored in outbyte
-   \retval -1 An error occured in the transmission
+   \retval -1 An error occurred in the transmission
    He must be called with at least 80 bytes of buffer. */
 int fsk_serial(fsk_data *fskd, short *buffer, int *len, int *outbyte);
 

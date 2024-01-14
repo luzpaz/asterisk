@@ -430,7 +430,7 @@ static int pickupchan_exec(struct ast_channel *chan, const char *data)
 	AST_DECLARE_APP_ARGS(args,
 		AST_APP_ARG(channel);
 		AST_APP_ARG(options);
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 	struct ast_flags opts;
 

@@ -435,7 +435,7 @@ static int app_exec(struct ast_channel *chan, const char *data)
 	);
 
 	if (!cfg) {
-		ast_log(LOG_ERROR, "Couldn't access configuratino data!\n");
+		ast_log(LOG_ERROR, "Couldn't access configuration data!\n");
 		return -1;
 	}
 

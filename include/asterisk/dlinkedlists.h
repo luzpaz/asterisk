@@ -893,7 +893,7 @@
 /*!
  * \brief Inserts a list entry after the current entry during a backwards traversal. Since
  *        this is a backwards traversal, this will insert the entry AFTER the current
- *        element. Since this is a backwards traveral, though, this would be BEFORE
+ *        element. Since this is a backwards traversal, though, this would be BEFORE
  *        the current entry in traversal order. Confusing?
  * \param elm This is a pointer to the entry to be inserted.
  * \param field This is the name of the field (declared using AST_DLLIST_ENTRY())

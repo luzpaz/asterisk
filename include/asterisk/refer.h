@@ -218,7 +218,7 @@ const char *ast_refer_get_refer_to(const struct ast_refer *refer);
 /*!
  * \brief Retrieve the source of this refer
  *
- * \param refer The refer to get the soure from
+ * \param refer The refer to get the source from
  *
  * \return The source of the refer
  * \retval NULL or empty string if the refer has no source

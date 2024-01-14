@@ -1292,7 +1292,7 @@ struct ao2_container;
  * \param ao2_options Container ao2 object options (See enum ao2_alloc_opts)
  * \param container_options Container behaviour options (See enum ao2_container_opts)
  * \param n_buckets Number of buckets for hash
- * \param hash_fn Pointer to a function computing a hash value. (NULL if everyting goes in first bucket.)
+ * \param hash_fn Pointer to a function computing a hash value. (NULL if everything goes in first bucket.)
  * \param sort_fn Pointer to a sort function. (NULL to not sort the buckets.)
  * \param cmp_fn Pointer to a compare function used by ao2_find. (NULL to match everything)
  *

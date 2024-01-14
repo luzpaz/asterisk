@@ -1197,7 +1197,7 @@ int ooSetFastStartResponse(OOH323CallData *pCall, Q931Message *pQ931msg,
          {
             /* According to the spec if we are accepting olc for transmission
                from called endpoint to calling endpoint, called endpoint should
-               insert a unqiue forwardLogicalChannelNumber into olc
+               insert a unique forwardLogicalChannelNumber into olc
             */
             olc->forwardLogicalChannelNumber =  pCall->logicalChanNoCur++;
             if(pCall->logicalChanNoCur > pCall->logicalChanNoMax)

@@ -51,7 +51,7 @@ int ast_db_get(const char *family, const char *key, char *value, int valuelen);
 int ast_db_get_allocated(const char *family, const char *key, char **out);
 
 /*!
- * \brief Check if family/key exitsts
+ * \brief Check if family/key exists
  *
  * \param family
  * \param key
@@ -72,7 +72,7 @@ int ast_db_del(const char *family, const char *key);
  * Unlike ast_db_del, if the key does not exist in the first place,
  * an error is emitted and -1 is returned.
  *
- * \retval -1 An error occured (including key not found to begin with)
+ * \retval -1 An error occurred (including key not found to begin with)
  * \retval 0 Successfully deleted
  */
 int ast_db_del2(const char *family, const char *key);

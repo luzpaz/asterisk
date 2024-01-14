@@ -885,7 +885,7 @@ int ast_json_dump_new_file_format(struct ast_json *root, const char *path, enum 
  * \since 12.0.0
  */
 struct ast_json_error {
-	/*! Line number error occured on */
+	/*! Line number error occurred on */
 	int line;
 	/*! Character (not byte, can be different for UTF-8) column on which the error occurred. */
 	int column;

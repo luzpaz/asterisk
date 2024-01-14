@@ -117,7 +117,7 @@ int stasis_message_router_is_done(struct stasis_message_router *router);
  * \param message The \ref stasis message
  *
  * This should be used when a message needs to be published synchronously to
- * the underlying subscription created by a message router. This is analagous
+ * the underlying subscription created by a message router. This is analogous
  * to \ref stasis_publish_sync.
  *
  * Note that the caller will be blocked until the thread servicing the message

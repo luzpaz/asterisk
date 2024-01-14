@@ -15,7 +15,7 @@ port=5000                    ; UDP port
 ;keepalive=120               ; in seconds, default = 120
 ;public_ip=                  ; if asterisk is behind a nat, specify your public IP
 ;autoprovisioning=no         ; Allow undeclared phones to register an extension. See README for important
-                             ; informations. no (default), yes, tn.
+                             ; information. no (default), yes, tn.
 ;mohsuggest=default
 ; ----------------------------- JITTER BUFFER CONFIGURATION --------------------------
 ; jbenable = yes              ; Enables the use of a jitterbuffer on the receiving side of a
@@ -62,8 +62,8 @@ port=5000                    ; UDP port
 ;contrast=8                  ; define the contrast of the LCD. From 0 to 15. Default = 8
 ;country=us                  ; country (ccTLD) for dial tone frequency. See README, default = us
 ;language=ru                 ; language used for audio files and onscreen messages translate
-;ringvolume=2                ; ring volume : 0,1,2,3, can be overrided by Dial(), default = 2
-;ringstyle=3                 ; ring style : 0 to 7, can be overrided by Dial(), default = 3
+;ringvolume=2                ; ring volume : 0,1,2,3, can be overridden by Dial(), default = 2
+;ringstyle=3                 ; ring style : 0 to 7, can be overridden by Dial(), default = 3
 ;cwvolume=2                  ; ring volume : 0,1,2,3, default = 0
 ;cwstyle=3                   ; ring style : 0 to 7, default = 2
 ;sharpdial=1                 ; dial number by pressing #, default = 0

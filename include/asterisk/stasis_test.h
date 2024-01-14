@@ -115,7 +115,7 @@ int stasis_message_sink_wait_for(struct stasis_message_sink *sink, int start,
  * The optional timeout prevents complete deadlock in a test.
  *
  * \param sink Sink to wait on.
- * \param num_messages expecte \a sink->num_messages.
+ * \param num_messages expects \a sink->num_messages.
  * \param timeout_millis Number of milliseconds to wait for.
  * \return Actual sink->num_messages value at return.
  *         If this is < \a num_messages, then the timeout expired.

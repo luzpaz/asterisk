@@ -32,9 +32,9 @@ except ImportError:
 
 
 def simple_name(name):
-    """Removes the {markers} from a path segement.
+    """Removes the {markers} from a path segment.
 
-    @param name: Swagger path segement, with {pathVar} markers.
+    @param name: Swagger path segment, with {pathVar} markers.
     """
     if name.startswith('{') and name.endswith('}'):
         return name[1:-1]
@@ -52,7 +52,7 @@ def wikify(str):
 
 
 def snakify(name):
-    """Helper to take a camelCase or dash-seperated name and make it
+    """Helper to take a camelCase or dash-separated name and make it
     snake_case.
     """
     r = ''
@@ -80,11 +80,11 @@ class PathSegment(Stringify):
         self.name = simple_name(name)
         #: True if segment is a {pathVar}, else None.
         self.is_wildcard = None
-        #: Underscore seperated name all ancestor segments
+        #: Underscore separated name all ancestor segments
         self.full_name = None
-        #: Dictionary of child PathSegements
+        #: Dictionary of child PathSegments
         self.__children = OrderedDict()
-        #: List of operations on this segement
+        #: List of operations on this segment
         self.operations = []
 
         if self.name != name:
@@ -170,7 +170,7 @@ class AsteriskProcessor(SwaggerPostProcessor):
         resource_api.name_caps = resource_api.name.upper()
         resource_api.name_title = resource_api.name.capitalize()
         resource_api.c_name = snakify(resource_api.name)
-        # Construct the PathSegement tree for the API.
+        # Construct the PathSegment tree for the API.
         if resource_api.api_declaration:
             resource_api.root_path = PathSegment('', None)
             for api in resource_api.api_declaration.apis:

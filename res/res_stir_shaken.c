@@ -207,7 +207,7 @@ static int func_read(struct ast_channel *chan, const char *function,
 		size_t count = 0;
 
 		if (!ast_strlen_zero(second)) {
-			ast_log(LOG_ERROR, "%s only takes 1 paramater for 'count'\n", function);
+			ast_log(LOG_ERROR, "%s only takes 1 parameter for 'count'\n", function);
 			return -1;
 		}
 
@@ -228,7 +228,7 @@ static int func_read(struct ast_channel *chan, const char *function,
 	 * we are searching for will be the second parameter. The index is the first.
 	 */
 	if (ast_strlen_zero(second)) {
-		ast_log(LOG_ERROR, "Retrieving a value using %s requires two paramaters (index, value) "
+		ast_log(LOG_ERROR, "Retrieving a value using %s requires two parameters (index, value) "
 			"- only index was given\n", function);
 		return -1;
 	}

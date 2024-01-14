@@ -91,7 +91,7 @@ extern "C" {
  * \brief Frame types
  *
  * \note It is important that the values of each frame type are never changed,
- *       because it will break backwards compatability with older versions.
+ *       because it will break backwards compatibility with older versions.
  *       This is because these constants are transmitted directly over IAX2.
  */
 enum ast_frame_type {
@@ -458,7 +458,7 @@ struct ast_control_pvt_cause_code {
  * \note This option should never be sent over the network */
 #define	AST_OPTION_OPRMODE		7
 
-/*! Explicitly enable or disable echo cancelation for the given channel
+/*! Explicitly enable or disable echo cancellation for the given channel
  * Option data is a single signed char value 0 or 1
  *
  * \note This option appears to be unused in the code. It is handled, but never
@@ -640,7 +640,7 @@ int ast_frame_slinear_sum(struct ast_frame *f1, struct ast_frame *f2);
 int ast_frame_clear(struct ast_frame *frame);
 
 /*!
- * \brief Copy the discription of a frame's subclass into the provided string
+ * \brief Copy the description of a frame's subclass into the provided string
  *
  * \param f The frame to get the information from
  * \param subclass Buffer to fill with subclass information
@@ -653,7 +653,7 @@ int ast_frame_clear(struct ast_frame *frame);
 char *ast_frame_subclass2str(struct ast_frame *f, char *subclass, size_t slen, char *moreinfo, size_t mlen);
 
 /*!
- * \brief Copy the discription of a frame type into the provided string
+ * \brief Copy the description of a frame type into the provided string
  *
  * \param frame_type The frame type to be described
  * \param ftype Buffer to fill with frame type description

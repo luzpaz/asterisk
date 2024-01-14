@@ -184,7 +184,7 @@ struct sip_options_aor {
 	int qualify_2xx_only;
 	/*! If true authenticate the qualify challenge response if needed */
 	int authenticate_qualify;
-	/*! \brief Qualify timeout. 0 is diabled. */
+	/*! \brief Qualify timeout. 0 is disabled. */
 	double qualify_timeout;
 	/*! \brief The name of the AOR */
 	char name[0];
@@ -1080,7 +1080,7 @@ static void sip_options_remove_contact_status(struct sip_options_aor *aor_option
 struct sip_options_synchronize_aor_task_data {
 	/*! \brief The AOR options for this AOR */
 	struct sip_options_aor *aor_options;
-	/*! \brief The AOR which contains the new configuraton */
+	/*! \brief The AOR which contains the new configuration */
 	struct ast_sip_aor *aor;
 	/*! \brief Optional container of existing AOR s*/
 	struct ao2_container *existing;

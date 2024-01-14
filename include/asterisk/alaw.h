@@ -55,7 +55,7 @@ extern short __ast_alaw[256];
 /*! \brief Convert signed linear sample to sign-magnitude pair for a-Law */
 static inline void ast_alaw_get_sign_mag(short sample, unsigned *sign, unsigned *mag)
 {
-	/* It may look illogical to retrive the sign this way in both cases,
+	/* It may look illogical to retrieve the sign this way in both cases,
 	 * but this helps gcc eliminate the branch below and produces
 	 * faster code */
 	*sign = ((unsigned short)sample >> 8) & AST_ALAW_SIGN_BIT;
